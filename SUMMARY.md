@@ -4,6 +4,7 @@
 
 ## OWASP 非人間アイデンティティ Top 10 2025 日本語版
 
+- [ランキング基準](Document/2025/docs/ranking-criteria.md)
 - [OWASP 非人間アイデンティティ Top 10 - 2025](Document/2025/docs/top-10-2025.md)
 - [NHI1:2025 不適切なオブボーディング (Improper Offboarding)](Document/2025/docs/1-improper-offboarding.md)
 - [NHI2:2025 シークレットの漏洩 (Secret Leakage)](Document/2025/docs/2-secret-leakage.md)
