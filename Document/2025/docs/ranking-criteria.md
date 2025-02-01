@@ -10,7 +10,7 @@ OWASP NHI Top-10 2025 プロジェクトでは OWASP の [Risk Rating Methodolog
 
 以下の表はランキングプロセスで使用される基準と用語をまとめたものです。
 
-| **脅威エージェント (Threat Agents): 悪用可能性 (Exploitability)** | **セキュリティ上の弱点 (Security Weakness): 蔓延度 (Prevalence)** | **セキュリティ上の弱点 (Security Weakness): 検出可能性 (Detectability)** | **影響度 (Impact): 技術度 (Technical)** |
+| **脅威エージェント (Threat Agents): 悪用可能性 (Exploitability)** | **セキュリティ上の弱点 (Security Weakness): 蔓延度 (Prevalence)** | **セキュリティ上の弱点 (Security Weakness): 検出可能性 (Detectability)** | **影響度 (Impact): 技術的影響 (Technical)** |
 |----------------------------------|------------------------------------|--------------------------------------|------------------------|
 | 容易 (Easy): **3**               | 広範 (Widespread): **3**           | 困難 (Hard): **3**                   | 重大 (Severe): **3**   |
 | 普通 (Average): **2**            | 普通 (Common): **2**               | 普通 (Average): **2**                | 普通 (Moderate): **2** |
