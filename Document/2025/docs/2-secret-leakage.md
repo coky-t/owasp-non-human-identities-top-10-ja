@@ -1,7 +1,7 @@
 # NHI2:2025 シークレットの漏洩 (Secret Leakage)
 
-| Threat agents/Attack vectors                                                                                                                                                                     | Security Weakness                                                                                                             | Impacts                                                                                                                                                             |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 脅威エージェントと攻撃ベクトル | セキュリティ上の弱点                     | 影響度                                             |
+|--------------------------------|------------------------------------------|----------------------------------------------------|
 | Exploitability: **Easy**                                                                                                                                                                        | Prevalence: **Common**<br>Detectability:  **Hard**                                                                        | Technical: **Severe**<br>Business: **Specific**                                                                                                                    |
 | Successfully exploiting a Leaked Secret is extremely easy given the fact that the secret enables the attacker to authenticate as the legitimate application. | Secrets are a common authentication method for machine-to-machine communication including API Keys, Access Keys, DB credentials. Throughout the development lifecycle, secrets are used to build new features and test machine-to-machine integrations and therefore tend to proliferate in the organization to many different data stores.<br />Detecting Leaked Secrets is difficult given the sheer variety of data stores in which they may appear. For example, Secrets can leak to developer endpoints, application logs, configuration files, SaaS providers, Cloud platforms and more. | Secrets tend to hold credentials for high-impact NHI (such as API Keys and Database connection strings), therefore impact on breach is Severe. |
 
@@ -38,6 +38,10 @@ Exposed secrets can lead to significant security risks. If a secret is leaked, w
 * **Rotate Secrets Regularly**
    - Automate the process of secret rotation to reduce the impact of exposed credentials.
    - Use tools that support secret versioning and automated updates in dependent services.
+
+## Related OWASP Resources
+* [OWASP Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
+* [OWASP WrongSecrets project](https://github.com/OWASP/wrongsecrets/)
 
 ## 参考情報
 * 38TB of data accidentally exposed by Microsoft AI researchers - [link](https://www.wiz.io/blog/38-terabytes-of-private-data-accidentally-exposed-by-microsoft-ai-researchers)
