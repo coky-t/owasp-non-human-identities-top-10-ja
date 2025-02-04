@@ -1,7 +1,7 @@
 # NHI4:2025 安全でない認証 (Insecure Authentication)
 
-| Threat Agents & Attack Vectors                    | Security Weakness                                                                                          | Impact                                         |
-|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| 脅威エージェントと攻撃ベクトル | セキュリティ上の弱点                     | 影響度                                             |
+|--------------------------------|------------------------------------------|----------------------------------------------------|
 | Exploitability: **Easy**            | Prevalence: **Widespread**<br>Detectability: **Easy**                       | Technical: **Moderate**<br>Business: **Specific**     |
 | Once an attacker detects an NHI using insecure authentication, they can utilize known techniques and tools to abuse and compromise the NHI. | Legacy applications are present in almost every authorization and usually use the legacy/insecure authentication methods like the implicit OAuth flow, or a service account without MFA.<br>Depending on the type of insecure authentication, detectability can vary between available simple discovery capabilities, to specific insecure authentication offenders that are difficult to identify.      | Insecure protocols are commonly used to facilitate sensitive processes that are given high access. Successful exploitation of an NHI using insecure authentication can lead to account takeover or privilege escalation. 
 
@@ -25,6 +25,9 @@ However, some authentication methods are deprecated, vulnerable to known attacks
 - **Leverage Credential-less Methods:** Replace static credentials with temporary, scoped tokens through instance profiles or OIDC federation.
 - **Standardize OAuth Implementations:** Avoid custom practices that deviate from OAuth standards to minimize security gaps.
 - **Conduct Regular Security Audits:** Periodically review authentication methods to identify and eliminate deprecated or insecure configurations.
+
+## Related OWASP Resources
+* [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 
 ## 参考情報
 - [Salesforce: Disabling Insecure Authorization Flows](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_disable_username_password_flow.htm&type=5)
