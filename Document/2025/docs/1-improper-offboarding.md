@@ -9,9 +9,9 @@
 不適切なオブボーディングとは、不要になったサービスアカウントやアクセスキーなどの非人間アイデンティティ (NHI) の不適切な非アクティブ化や削除を指します。この状況は、アプリケーションが廃止されたとき、サービスがオフラインになったとき、またはこれらの NHI の元の所有者や管理者が組織を離れたときによく発生します。NHI を適切にオフボードしないと、重大なセキュリティリスクをもたらします。監視されていないサービスや廃止されたサービスは脆弱なままになることがあり、関連する NHI が攻撃者に悪用され、機密性の高いシステムやデータに不正アクセスされる可能性があります。さらに、管理されていない NHI は高い権限を保持する可能性があり、セキュリティ侵害による潜在的な損害を増幅します。
 
 ## 攻撃シナリオの例
-- **Orphaned Kubernetes Service Accounts:** A Kubernetes cluster belonging to a decommissioned service retains active service accounts. If an attacker gains access to this unmonitored cluster, they could exploit these service accounts to interact with other resources within the organization's infrastructure, potentially leading to data exfiltration or further compromise.
-- **Ex-Employee Exploiting Unrevoked Credentials:** An employee who managed automated services leaves the organization, but the NHIs associated with those services are not disabled or transferred. The ex-employee could misuse still-valid credentials to access the organization's systems remotely, leading to unauthorized data access, service disruptions, or even sabotage.
-- **Leftover Apps Used for Privilege Escalation & Lateral Movement:** An application created in a test environment, designated to test a workload, is later connected to a sensitive production environment to complete the testing suite, and is not decommissioned once the workload is transferred to run in a production server. Then, an attack reaching the less secure test environment can use this application to move laterally within the organization.
+- **管理されていない Kubernetes サービスアカウント:** 廃止されたサービスに属する Kubernetes クラスタはアクティブなサービスアカウントを持ち続けます。攻撃者がこの監視されていないクラスタにアクセスした場合、これらのサービスアカウントを悪用して組織のインフラストラクチャ内の他のリソースとやり取りし、データ流出やさらなる侵害につながる可能性があります。
+- **失効していないクレデンシャルを悪用する元従業員:** 自動サービスを管理していた従業員が組織を去りますが、それらのサービスに関連付けられた NHI は無効化や移管されていません。元従業員は依然として有効なクレデンシャルを悪用して組織のシステムにリモートアクセスし、不正なデータアクセス、サービス中断、さらには妨害行為につながる可能性があります。
+- **権限昇格とラテラルムーブメントに使用される残存アプリ:** ワークロードをテストするように設計されたテスト環境で作成されたアプリケーションは、後に機密性の高い本番環境に接続されてテストスイートを完了しますが、ワークロードが移管されて本番サーバーで実行しても廃止されません。その後、安全でないテスト環境に到達した攻撃はこのアプリケーションを使用して組織内でラテラルに移動できます。
 
 ## 防御方法
 - Implement an offboarding process that reviews all NHIs associated with the departing employee. For each NHI, determine if it is still required. If not, decommission it; otherwise, transfer ownership to another employee and rotate any credentials the departing employee may have had access to during its creation.
