@@ -2,8 +2,8 @@
 
 | 脅威エージェントと攻撃ベクトル | セキュリティ上の弱点                     | 影響度                                             |
 |--------------------------------|------------------------------------------|----------------------------------------------------|
-| Exploitability: **Easy**                                                                                                                                                                        | Prevalence: **Common**<br>Detectability:  **Hard**                                                                        | Technical: **Severe**<br>Business: **Specific**                                                                                                                    |
-| Successfully exploiting a Leaked Secret is extremely easy given the fact that the secret enables the attacker to authenticate as the legitimate application. | Secrets are a common authentication method for machine-to-machine communication including API Keys, Access Keys, DB credentials. Throughout the development lifecycle, secrets are used to build new features and test machine-to-machine integrations and therefore tend to proliferate in the organization to many different data stores.<br />Detecting Leaked Secrets is difficult given the sheer variety of data stores in which they may appear. For example, Secrets can leak to developer endpoints, application logs, configuration files, SaaS providers, Cloud platforms and more. | Secrets tend to hold credentials for high-impact NHI (such as API Keys and Database connection strings), therefore impact on breach is Severe. |
+| 悪用可能性: **容易**           | 蔓延度: **普通**<br>検出可能性: **困難** | 技術的影響: **重大**<br>ビジネスへの影響: **限定** |
+| 漏洩したシークレットが攻撃者を正当なアプリケーションとして認証できるという事実を踏まえると、そのシークレットの悪用するのは非常に簡単です。 | シークレットは API キー、アクセスキー、DB クレデンシャルなどのマシン間通信のための一般的な認証方法です。開発ライフサイクル全体を通じて、シークレットは新機能の構築やマシン間統合のテストに使用されるため、組織内の多くのさまざまなデータストアに拡散する傾向があります。 <br/> 漏洩したシークレットを検出することは、シークレットが出現する可能性のあるデータストアが多種多様であることを考えると困難です。たとえば、シークレットは開発者のエンドポイント、アプリケーションログ、設定ファイル、SaaS プロバイダ、クラウドプラットフォームなどに漏洩する可能性があります。 | シークレットは影響度の高い NHI (API キーやデータベース接続文字列など) のクレデンシャルを保持する傾向があるため、侵害の影響は重大です。 |
 
 
 ## 説明
