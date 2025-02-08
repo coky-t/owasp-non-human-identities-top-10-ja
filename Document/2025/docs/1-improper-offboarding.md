@@ -24,8 +24,8 @@
 - [Microsoft Breach by Midnight Blizzard Threat Actor](https://msrc.microsoft.com/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard/)
 
 ## データポイント
-- CSA NHI Report - 31% answers put insufficient NHI offboarding as one of the top 3 most concerning NHI threats. (5/10)
-- CSA NHI Report - 32% of times orphaned identities were the cause for NHI-related security incidents. (4/10)
-- CSA NHI Report - 15% of organizations need automated provisioning and de-provisioning as the most important capability of an NHI tool. (9/16)
-- CSA NHI Report - 51% of organizations have no formal process to offboard or revoke long lived API keys.
-- Recent Breach - [Microsoft Breach](https://medium.com/@ronilichtman/how-to-protect-yourself-from-the-microsoft-oauth-attack-powershell-scripts-included-71b398034b8d)
+- CSA NHI Report - 31% の回答者が不十分な NHI オブボーディングを最も懸念される NHI 脅威のトップ 3 の一つに挙げています。 (5/10)
+- CSA NHI Report - 32% の回答が NHI 関連のセキュリティインシデントの原因として管理されていないアイデンティティを挙げています。 (4/10)
+- CSA NHI Report - 15% の組織が NHI ツールの最も重要な機能として自動プロビジョニングとプロビジョニング解除を必要としています。 (9/16)
+- CSA NHI Report - 51% の組織が長期間有効な API キーをオフボードまたは失効するための正式なプロセスを持っていません。
+- 最近の侵害 - [Microsoft Breach](https://medium.com/@ronilichtman/how-to-protect-yourself-from-the-microsoft-oauth-attack-powershell-scripts-included-71b398034b8d)
