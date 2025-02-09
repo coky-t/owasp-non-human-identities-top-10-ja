@@ -8,8 +8,8 @@
 
 ## 説明
 
-Secret Leakage refers to the leakage of sensitive NHIs such as API keys, tokens, encryption keys, and certificates to unsanctioned data stores throughout the software development lifecycle. Developers frequently use these secrets to enable applications to authenticate and interact with various services and resources within an organization. However, when secrets are leaked —for instance, hard-coded into source code, stored in plain text configuration files, or sent over public chat applications —they become susceptible to exposure.
-Exposed secrets can lead to significant security risks. If a secret is leaked, whether through code repositories, logs, or malware on a developer's machine, threat actors can exploit it to gain unauthorized access to systems, steal data, or escalate privileges within the network. This can result in data breaches, service disruptions, and a loss of trust from customers and stakeholders.
+シークレットの漏洩とは、ソフトウェア開発ライフサイクル全体を通じて、API キー、トークン、暗号鍵、証明書などの機密性の高い NHI が未認可のデータストアに漏洩することを指します。開発者はこれらのシークレットを頻繁に使用して、アプリケーションが組織内のさまざまなサービスやリソースを認証してやり取りできるようにします。しかし、たとえば、ソースコードにハードコードされていたり、プレーンテキストの設定ファイルに保存されていたり、パブリックチャットアプリケーションで送信されて、シークレットが漏洩すると、開示されやすくなります。
+開示されたシークレットは重大なセキュリティリスクにつながる可能性があります。シークレットがコードリポジトリ、ログ、開発者のマシン上のマルウェアを介して漏洩すると、脅威アクターはそれを悪用して、システムへの不正アクセス、データの窃取、ネットワーク内での権限の昇格を行うことができます。これは、データ侵害、サービス中断、顧客や利害関係者からの信頼の喪失につながる可能性があります。
 
 ## 攻撃シナリオの例
 
