@@ -13,8 +13,8 @@
 
 ## 攻撃シナリオの例
 
-* **Azure SAS Token Leakage:** An Azure SAS Token is committed to a public Github repository. Attackers use that SAS Token to authenticate to the associated Azure subscription and leak internal Microsoft Teams messages.
-* **Delinea Admin API Key:** A Delinea Admin API Key is stored in a script in an employee-public file share. An attacker with limited privileges in the corporate network identifies the API Key, reads an admin credential from the PAM and escalates their privilege in the corporate network.
+* **Azure SAS トークンの漏洩:** Azure SAS トークンはパブリック GitHub リポジトリにコミットされています。攻撃者はその SAS トークンを使用して、関連する Azure サブスクリプションへの認証を行い、Microsoft Teams の内部メッセージを漏洩します。
+* **Delinea Admin API キー:** Delinea Admin API は従業員の公開ファイル共有内のスクリプトに保存されています。企業ネットワーク内での限られた権限を有する攻撃者はその API キーを識別して、PAM から管理者クレデンシャルを読み取り、企業ネットワーク内での権限を昇格します。
 
 
 
