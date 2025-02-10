@@ -20,26 +20,26 @@
 
 ## 防御方法
 
-* **Use Ephemeral Credentials Where Possible**
-   - Replace static secrets with short-lived, ephemeral credentials that are generated on-demand (e.g., AWS STS, Azure Managed Identities, or OAuth tokens).
-   - Ephemeral credentials reduce the risk of long-term exposure.
+* **可能な場合は一時的なクレデンシャルを使用する**
+   - 静的なシークレットを、オンデマンドで生成される短期間有効で一時的なクレデンシャル (AWS STS, Azure Managed Identities, OAuth トークンなど) に置き換えます。
+   - 一時的なクレデンシャルは長期的な開示のリスクを軽減します。
 
-* **Use Secret Management Tools**
-   - Store secrets securely using dedicated secret management tools such as AWS Secrets Manager, Azure Key Vault, or HashiCorp Vault.
-   - Ensure secrets are not hardcoded in source code, configuration files, or scripts.
+* **シークレット管理ツールを使用する**
+   - AWS Secrets Manager, Azure Key Vault, HashiCorp Vault などの専用のシークレット管理ツールを使用して、シークレットを安全に保存します。
+   - シークレットがソースコード、設定ファイル、スクリプトにハードコードされていないことを確認します。
 
-* **Automate Secret Detection**
-   - Integrate secret scanning tools (e.g., GitHub Secret Scanning, TruffleHog, Gitleaks) into CI/CD pipelines to detect and prevent secrets from being committed to repositories.
+* **シークレット検出を自動化する**
+   - シークレットスキャンツール (GitHub Secret Scanning, TruffleHog, Gitleaks など) を CI/CD パイプラインに統合して、シークレットがリポジトリにコミットされるのを検出して防止します。
 
-* **Restrict Secret Scope and Permissions**
-   - Follow the principle of least privilege by restricting access to secrets to only the applications and services that require them.
-   - Use role-based access control (RBAC) to enforce fine-grained permissions.
+* **シークレットのスコープとパーミッションを制限する**
+   - 最小権限の原則に従い、シークレットへのアクセスを、それを必要とするアプリケーションとサービスのみに制限します。
+   - ロールベースのアクセス制御 (RBAC) を使用して、きめ細かいパーミッションを適用します。
 
-* **Rotate Secrets Regularly**
-   - Automate the process of secret rotation to reduce the impact of exposed credentials.
-   - Use tools that support secret versioning and automated updates in dependent services.
+* **シークレットを定期的に入れ替える**
+   - シークレットローテーションのプロセスを自動化して、開示されたクレデンシャルの影響を軽減します。
+   - シークレットのバージョン管理と依存サービスの自動更新をサポートするツールを使用します。
 
-## Related OWASP Resources
+## 関連する OWASP リソース
 * [OWASP Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
 * [OWASP WrongSecrets project](https://github.com/OWASP/wrongsecrets/)
 
