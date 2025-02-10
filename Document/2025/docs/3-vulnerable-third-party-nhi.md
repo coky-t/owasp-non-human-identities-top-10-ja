@@ -8,9 +8,9 @@
 
 ## 説明
 
-Third-party non-human identities (NHIs) are extensively integrated into the development workflow, both through the use of integrated development environments (IDEs) and their extensions and also through the use of 3rd party SaaS. Visual Studio Code (VSCode), for example, has a vast marketplace of extensions that enhance functionality. These extensions often require significant access to the developer's machine, including the ability to read code, access environment variables, and interact with other system resources.
-To perform their functions, 3rd parties may need to integrate with external services such as version control systems, databases, virtual machines, and cloud environments. This integration necessitates providing the 3rd parties with sensitive NHIs like access tokens, API keys, or SSH keys. If a third-party extension is compromised—whether through a security vulnerability or a malicious update—it can be exploited to steal these credentials or misuse the granted permissions.
-Moreover, 3rd parties can be exposed to hard-coded credentials within the codebase or environment variables that contain sensitive information. If a 3rd party has access to these elements, and it becomes malicious or is already malicious, it can exfiltrate this information. Therefore, relying on third-party NHIs without proper vetting and security measures introduces significant risks to the organization.
+サードパーティ非人間アイデンティティ (NHI) は、統合開発環境 (IDE) とその拡張機能の使用、およびサードパーティ SaaS の使用を通じて、開発ワークフローに広範囲に統合されています。たとえば、Visual Studio Code (VSCode) には機能を強化する拡張機能の膨大なマーケットプレイスがあります。これらの拡張機能は、多くの場合、コードの読み取り、環境変数へのアクセス、他のシステムリソースとのやり取りなど、開発者のマシンへの重要なアクセスを必要とします。
+その機能を実行するために、サードパーティはバージョン管理システム、データベース、仮想マシン、クラウド環境などの外部サービスと統合する必要があるかもしれません。この統合にはアクセストークン、API キー、SSH キーなどの機密性の高い NHI をサードパーティに提供する必要があります。サードパーティ拡張機能がセキュリティ脆弱性や悪意のあるアップデートによって侵害された場合、悪用されて、これらのクレデンシャルを窃取したり、付与された権限を悪用する可能性があります。
+さらに、サードパーティはコードベース内にハードコードされたクレデンシャルや機密情報を含む環境変数にさらされる可能性があります。サードパーティがこれらの要素にアクセスし、それが悪意のあるものになったり、すでに悪意のある場合、この情報を流出する可能性があります。したがって、適切な審査やセキュリティ対策を講じずにサードパーティ NHI に依存すると、組織に重大なリスクをもたらします。
 
 ## 攻撃シナリオの例
 
