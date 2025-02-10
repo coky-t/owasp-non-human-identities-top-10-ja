@@ -53,13 +53,13 @@
 
 ## データポイント
 * [CSA NHI Report](https://cloudsecurityalliance.org/artifacts/state-of-non-human-identity-security-survey-report)
-    * 31% of times poor secrets management was the cause for NHI-related security incidents. (6/10)
-    * 21% of organizations put service accounts as most challenging to manage. (6/16)
-    * 26% of organizations need management of secrets lifecycle as the most important capability of an NHI tool. (1/16)
-    * 37% of organizations report secrets are stored in environment variables or hard-coded into application code.
+    * 31% の回答が NHI 関連のセキュリティインシデントの原因としてシークレット管理の不備を挙げています。 (6/10)
+    * 21% の組織がサービスアカウントの管理を最も困難な課題として挙げています。 (6/16)
+    * 26% の組織が NHI ツールの最も重要な機能としてシークレットライフサイクルの管理を必要としています。 (1/16)
+    * 37% の組織がシークレットを環境変数に保存しているか、アプリケーションコードにハードコードしていると報告しています。
 * Verizon DBIR
-    * 21% of breaches initial action was use of stolen creds (1/10)
-* Recent Breaches
-    * MSFT SAS Token Breach - [link](https://www.wiz.io/blog/38-terabytes-of-private-data-accidentally-exposed-by-microsoft-ai-researchers)
-    * Uber Breach - [link](https://www.upguard.com/blog/what-caused-the-uber-data-breach)
-    * Internet Archive breach - [link](https://www.bleepingcomputer.com/news/security/internet-archive-hacked-data-breach-impacts-31-million-users/)
+    * 21% の侵害が初期アクションとして盗まれたクレデンシャルを使用していました。 (1/10)
+* 最近の侵害
+    * MSFT SAS トークンの侵害 - [リンク](https://www.wiz.io/blog/38-terabytes-of-private-data-accidentally-exposed-by-microsoft-ai-researchers)
+    * Uber の侵害 - [リンク](https://www.upguard.com/blog/what-caused-the-uber-data-breach)
+    * Internet Archive の侵害 - [リンク](https://www.bleepingcomputer.com/news/security/internet-archive-hacked-data-breach-impacts-31-million-users/)
