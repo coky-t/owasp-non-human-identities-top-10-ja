@@ -14,9 +14,9 @@
 
 ## 攻撃シナリオの例
 
-* **IDE Integration with Code Repositories** Developers often configure their IDEs to interact directly with code repositories like GitHub or GitLab. This setup requires supplying the IDE or its extensions with personal access tokens (PATs) or SSH keys to enable features like code syncing, pushing commits, and managing pull requests. If an extension is compromised, these credentials can be exposed, allowing unauthorized access to the developer's repositories and potentially sensitive organizational code.
-* **Extensions Accessing Cloud Resources** Extensions that facilitate deployment and testing on virtual machines or cloud services require access to cloud environments. Developers provide these extensions with NHIs such as API keys or access tokens to interact with services like AWS, Azure, or Google Cloud Platform. A malicious extension could use these credentials to access, modify, or delete cloud resources, leading to data breaches or service disruptions.
-* **3rd Party Service Provider** Developers integrate a 3rd party service provider such as Sisense to create a BI application. The developers create a privileged NHI such as database credentials and send them to the provider as part of the integration process. If the provider is breached, the attacker can leverage the NHI to gain access to the developer’s environment.
+* **コードリポジトリと IDE の統合** 開発者は GitHub や GitLab などのコードリポジトリと直接やり取りするように IDE を設定することがよくあります。このセットアップでは IDE やその拡張機能に個人アクセストークン (PAT) や SSH キーを提供して、コードの同期、コミットのプッシュ、プルリクエストの管理などの機能を有効にする必要があります。拡張機能が侵害されると、これらのクレデンシャルは開示されて、開発者のリポジトリや機密性の高い組織のコードへの不正アクセスが可能になります。
+* **クラウドリソースにアクセスする拡張機能** 仮想マシンやクラウドサービス上でのデプロイメントやテストを容易にする拡張機能にはクラウド環境へのアクセスが必要です。開発者はこれらの拡張機能に API キーやアクセストークンなどの NHI を提供して、AWS, Azure, Google Cloud Platform などのサービスとやり取りします。悪意のある拡張機能はこれらのクレデンシャルを使用して、クラウドリソースにアクセス、変更、削除し、データ侵害やサービス中断を引き起こす可能性があります。
+* **サードパーティサービスプロバイダ** 開発者は Sisense などのサードパーティサービスプロバイダを統合して BI アプリケーションを作成します。開発者はデータベースクレデンシャルなどの特権 NHI を作成して、統合プロセスの一環としてプロバイダに送信します。プロバイダが侵害されると、攻撃者は NHI を利用して開発者の環境にアクセスできます。
 
 
 ## 防御方法
