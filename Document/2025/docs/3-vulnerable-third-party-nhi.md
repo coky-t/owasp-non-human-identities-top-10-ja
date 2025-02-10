@@ -21,17 +21,17 @@
 
 ## 防御方法
 
-* **Vet and Limit Third-Party Integrations**  
-   - Perform security reviews before integrating third-party tools or services, ensuring vendors follow security best practices.  
-   - Grant only the minimum permissions required (principle of least privilege) and regularly audit or revoke unused access.
+* **サードパーティ統合を審査して制限する**
+   - サードパーティツールやサービスを統合する前にセキュリティレビューを実行し、ベンダーがセキュリティベストプラクティスに従っていることを確認します。
+   - 必要な最低限のパーミッションのみを付与し (最小権限の原則)、未使用のアクセスを定期的に監査するか取り消します。
 
-* **Monitor and Detect Third-Party Behavior**  
-   - Continuously monitor third-party activity using logs, API call tracking, and behavior analytics to detect anomalies.  
-   - Implement security scanning tools to identify vulnerabilities or malicious behavior in third-party software.
+* **サードパーティの動作を監視して検出する**
+   - ログ、API コール追跡、動作分析を使用してサードパーティのアクティビティを継続的に監視し、場を検出します。
+   - セキュリティスキャンツールを導入して、サードパーティソフトウェアの脆弱性や悪意のある動作を特定します。
 
-* **Use Ephemeral and Rotating Credentials**  
-   - Replace long-term secrets with short-lived, ephemeral credentials (e.g., AWS STS, Azure Managed Identities).  
-   - Automate credential rotation to limit the impact of compromised third-party integrations.
+* **一時的なクレデンシャルとクレデンシャルローテーションを使用する**
+   - 長期間有効なシークレットを、短期間有効で一時的なクレデンシャル (AWS STS, Azure Managed Identities など) に置き換えます。
+   - シークレットローテーションを自動化して、侵害されたサードパーティ統合の影響を制限します。
 
 
 ## 参考情報
