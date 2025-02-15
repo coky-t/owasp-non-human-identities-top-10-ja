@@ -43,15 +43,15 @@
 
 ## データポイント
 * [Datadog State of the Cloud 2024]((https://www.datadoghq.com/state-of-cloud-security/))
-    * 10% third party integration to AWS are overprivileged.
-    * 2% third party integration to AWS are vulnerable to confused deputy vulnerability.
-    * Initial access to 365 is made through malicious 3d-party OAuth apps.
+    * 10% の AWS へのサードパーティ統合は過剰な権限が与えられています。
+    * 2% の AWS へのサードパーティ統合は混乱した代理 (Confused Deputy) の脆弱性があります。
+    * 365 への初期アクセスは悪意のあるサードパーティ OAuth アプリを通じて行われます。
 * [CSA NHI Report](https://cloudsecurityalliance.org/artifacts/state-of-non-human-identity-security-survey-report)
-    * 38% answers put supply chain attacks as one of the top 3 most concerning NHI threats. (2/10)
-    * 16% answers put malicious suppliers as one of the top 3 most concerning NHI threats. (9/10)
-    * 29% of times compromised external integrations were the cause for NHI-related security incidents. (7/10)
-    * 21% of organizations put managing requests for third-party tools and services as most challenging to manage. (10/16)
-    * 26% of organizations need visibility into third-party vendors as the most important capability of an NHI tool. (1/16)
-    * 38% of organizations reported limited to no visibility into third-party vendors.
-* Recent Breaches
-    * Sisense Breach - [link](https://medium.com/@ronilichtman/making-sense-out-of-the-sisense-hack-f61a3d9b80a7)
+    * 38% の回答者がサプライチェーン攻撃を最も懸念される NHI 脅威のトップ 3 の一つに挙げています。 (2/10)
+    * 16% の回答者が悪意のあるサプライヤを最も懸念される NHI 脅威のトップ 3 の一つに挙げています。 (9/10)
+    * 29% の回答が NHI 関連のセキュリティインシデントの原因として外部統合の侵害を挙げています。 (7/10)
+    * 21% の組織が最も困難な管理としてサードパーティツールとサービスのリクエストの管理を挙げています。 (10/16)
+    * 26% の組織が NHI ツールの最も重要な機能としてサードパーティベンダの可視性を必要としています。 (1/16)
+    * 38% の組織がサードパーティベンダの可視性が限定的か全くないと報告しています。
+* 最近の侵害
+    * Sisense の侵害 - [リンク](https://medium.com/@ronilichtman/making-sense-out-of-the-sisense-hack-f61a3d9b80a7)
