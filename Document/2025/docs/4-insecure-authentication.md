@@ -2,8 +2,8 @@
 
 | 脅威エージェントと攻撃ベクトル | セキュリティ上の弱点                     | 影響度                                             |
 |--------------------------------|------------------------------------------|----------------------------------------------------|
-| Exploitability: **Easy**            | Prevalence: **Widespread**<br>Detectability: **Easy**                       | Technical: **Moderate**<br>Business: **Specific**     |
-| Once an attacker detects an NHI using insecure authentication, they can utilize known techniques and tools to abuse and compromise the NHI. | Legacy applications are present in almost every authorization and usually use the legacy/insecure authentication methods like the implicit OAuth flow, or a service account without MFA.<br>Depending on the type of insecure authentication, detectability can vary between available simple discovery capabilities, to specific insecure authentication offenders that are difficult to identify.      | Insecure protocols are commonly used to facilitate sensitive processes that are given high access. Successful exploitation of an NHI using insecure authentication can lead to account takeover or privilege escalation. 
+| 悪用可能性: **容易**           | 蔓延度: **広範**<br>検出可能性: **容易** | 技術的影響: **普通**<br>ビジネスへの影響: **限定** |
+| 攻撃者は、安全でない認証を使用する NHI を検出すると、既存の技法やツールを使用して NHI を悪用し、侵害できます。 | レガシーアプリケーションはほぼすべての認証に存在し、通常は暗黙的な OAuth フローや MFA のないサービスアカウントなどのレガシーや安全でない認証手法を使用します。 <br> 安全でない認証のタイプに応じて、検出可能性は利用可能な単純な検出機能から、識別が困難な特定の安全でない認証違反者までさまざまです。 | 安全でないプロトコルは高いアクセスを付与された機密性の高いプロセスを容易にするためによく使用されます。安全でない認証を使用する NHI の悪用に成功すると、アカウントの乗っ取りや権限昇格につながる可能性があります。 |
 
 ## 説明
 Developers frequently integrate internal and external (third-party) services into their SaaS applications and cloud environments to enhance their experience or facilitate operation. These services require access to resources within these systems, necessitating authentication credentials. Multiple authentication methods are available across various platforms, and developers must judiciously select the most secure and appropriate option for their specific use case.
