@@ -3,11 +3,11 @@
 | 脅威エージェントと攻撃ベクトル | セキュリティ上の弱点                     | 影響度                                             |
 |--------------------------------|------------------------------------------|----------------------------------------------------|
 | 悪用可能性: **容易**           | 蔓延度: **広範**<br>検出可能性: **容易** | 技術的影響: **普通**<br>ビジネスへの影響: **限定** |
-| 攻撃者は、安全でない認証を使用する NHI を検出すると、既存の技法やツールを使用して NHI を悪用し、侵害できます。 | レガシーアプリケーションはほぼすべての認証に存在し、通常は暗黙的な OAuth フローや MFA のないサービスアカウントなどのレガシーや安全でない認証手法を使用します。 <br> 安全でない認証のタイプに応じて、検出可能性は利用可能な単純な検出機能から、識別が困難な特定の安全でない認証違反者までさまざまです。 | 安全でないプロトコルは高いアクセスを付与された機密性の高いプロセスを容易にするためによく使用されます。安全でない認証を使用する NHI の悪用に成功すると、アカウントの乗っ取りや権限昇格につながる可能性があります。 |
+| 攻撃者は、安全でない認証を使用する NHI を検出すると、既存の技法やツールを使用して NHI を悪用し、侵害できます。 | レガシーアプリケーションはほぼすべての認証に存在し、通常は暗黙的な OAuth フローや MFA のないサービスアカウントなどのレガシーや安全でない認証方式を使用します。 <br> 安全でない認証のタイプに応じて、検出可能性は利用可能な単純な検出機能から、識別が困難な特定の安全でない認証違反者までさまざまです。 | 安全でないプロトコルは高いアクセスを付与された機密性の高いプロセスを容易にするためによく使用されます。安全でない認証を使用する NHI の悪用に成功すると、アカウントの乗っ取りや権限昇格につながる可能性があります。 |
 
 ## 説明
-Developers frequently integrate internal and external (third-party) services into their SaaS applications and cloud environments to enhance their experience or facilitate operation. These services require access to resources within these systems, necessitating authentication credentials. Multiple authentication methods are available across various platforms, and developers must judiciously select the most secure and appropriate option for their specific use case.
-However, some authentication methods are deprecated, vulnerable to known attacks, or considered weak due to outdated security practices. Utilizing insecure or obsolete authentication mechanisms can expose organizations to significant risks, including unauthorized access, data breaches, and compliance violations. It is imperative for developers and organizations to evaluate all available authentication options, adhere to industry best practices, and choose methods that provide robust security features and adherence to standardized protocols like OAuth 2.1 and OpenID Connect (OIDC).
+開発者は SaaS アプリケーションやクラウド環境に内部や外部 (サードパーティ) のサービスを統合して、エクスペリエンスを向上したり、操作を容易にすることがよくあります。これらのサービスはシステム内のリソースにアクセスする必要があり、認証クレデンシャルが必要になります。さまざまなプラットフォームで複数の認証方式を利用できるため、開発者は特定のユースケースに最も安全で適切なオプションを慎重に選択しなければなりません。
+しかし、一部の認証方式は非推奨であったり、既知の攻撃に対して脆弱であったり、時代遅れのセキュリティプラクティスのために脆弱であるとみなされていたりします。安全でなかったり、時代遅れの認証メカニズムを利用することは、組織を不正アクセス、データ侵害、コンプライアンス違反などの重大なリスクにさらす可能性があります。開発者や組織は、利用可能な認証オプションを評価し、業界のベストプラクティスに準拠し、堅牢なセキュリティ機能を提供して OAuth 2.1 や OpenID Connect (OIDC) などの標準化されたプロトコルに準拠する方式を選択することが不可欠です。
 
 
 ## 攻撃シナリオの例
