@@ -11,13 +11,13 @@
 
 
 ## 攻撃シナリオの例
-- **Deprecated OAuth Flows:** Certain flows from earlier OAuth versions (OAuth 1.0 and OAuth 2.0) have been deprecated due to security vulnerabilities. For example:
-    - **Implicit Flow:** Commonly used for single-page applications, it is now discouraged because it exposes access tokens in the URL, making them susceptible to interception and replay attacks.
-    - **Authorization Code Flow without PKCE:** Vulnerable to interception and Cross-Site Request Forgery (CSRF) attacks. Modern implementations should use the Proof Key for Code Exchange (PKCE) extension to enhance security.
-- **Non-Standard OAuth Implementations:** Some platforms deviate from official OAuth standards by implementing custom behaviors, such as converting access tokens into cookies or generating JSON Web Tokens (JWTs) on demand. These non-standard practices can introduce unanticipated vulnerabilities, as they may lack the security considerations outlined in the official specifications, potentially leading to security breaches.
-- **Use of Credential-Based Authentication over Credential-less Methods:** Cloud providers offer credential-less authentication mechanisms, such as intra-cloud access using instance profiles or OIDC federation. Relying on static, credential-based authentication (like long-lived API keys or passwords) is discouraged because these credentials can be exposed in breaches, code repositories, or logs. Credential-less methods provide temporary, scoped credentials that reduce the risk of credential leakage and misuse.
-- **App Passwords Bypassing MFA:** Platforms like Microsoft and Google provide app-specific passwords to support older applications that do not support modern authentication protocols. These passwords bypass MFA, meaning that even if a user has MFA enabled, the app password can be used to access the account without additional verification. Attackers who obtain an app password can exploit this to gain unauthorized access, effectively nullifying the security benefits of MFA and converting the user account into an insecure service account.
-- **Legacy Authentication Protocols Using Username and Password:** Some applications continue to use outdated or proprietary authentication flows that rely on direct transmission of usernames and passwords, mimicking<br> OAuth-like behavior without adhering to its security standards. These methods lack the protections offered by official OAuth flows, making them susceptible to credential interception, replay attacks, and man-in-the-middle exploits.
+- **非推奨の OAuth フロー:** 以前の OAuth バージョン (OAuth 1.0 および OAuth 2.0) の特定のフローはセキュリティ脆弱性のために非推奨となりました。たとえば、以下のものです。
+    - **暗黙のフロー:** シングルページアプリケーションでよく使用されますが、URL にアクセストークンを開示して、傍受やレプレイ攻撃を受けやすくなるため、現在は推奨されていません。
+    - **PKCE を使用しない認証コードフロー:** 傍受やクロスサイトリクエストフォージェリ (CSRF) 攻撃に脆弱です。最新の実装では Proof Key for Code Exchange (PKCE) 拡張を使用してセキュリティを強化すべきです。
+- **非標準の OAuth 実装:** 一部のプラットフォームでは、アクセストークンを Cookie に変換したり、オンデマンドで JSON Web Token (JWT) を生成するなど、カスタム動作を実装することで公式の OAuth 標準から逸脱しています。このような非標準のものは、公式仕様で説明されているセキュリティ上の考慮事項を欠いている可能性があるため、予期しない脆弱性をもたらし、セキュリティ侵害につながる可能性があります。
+- **クレデンシャルレス方式ではなくクレデンシャルベース認証の使用:** クラウドプロバイダは、インスタンスプロファイルや OIDC フェデレーションを使用したクラウド内アクセスなど、クレデンシャルレス認証メカニズムを提供しています。静的でクレデンシャルベースの認証 (長期間有効な API キーやパスワードなど) に依存することは、これらのクレデンシャルが侵害、コードリポジトリ、ログで開示される可能性があるため、推奨されていません。クレデンシャルレス方式は一時的で範囲限定されたクレデンシャルを提供して、クレデンシャルの漏洩や誤用を軽減します。
+- **MFA をバイパスするアプリパスワード:** Microsoft や Google などのプラットフォームはアプリ固有のパスワードを提供して、最新の認証プロトコルをサポートしていない古いアプリケーションをサポートしています。これらのパスワードは MFA をバイパスします。つまり、ユーザーが MFA を有効にしていても、アプリパスワードを使用して追加検証なしでアカウントにアクセスできます。アプリパスワードを入手した攻撃者はこれを悪用して不正アクセスを行い、MFA のセキュリティ上の利点を事実上無効にし、ユーザーアカウントを安全でないサービスアカウントに変換できます。
+- **ユーザー名とパスワードを使用するレガシー認証プロトコル:** 一部のアプリケーションでは、ユーザー名とパスワードの直接送信に依存する古い認証フローや独自の認証フローを使い続け、セキュリティ標準に準拠せずに OAuth のような動作を模倣しています。これらの方法には公式の OAuth フローで提供される保護がないため、クレデンシャルの傍受、リプレイ攻撃、中間者攻撃の影響を受けやすくなります。
 
 
 ## 防御方法
