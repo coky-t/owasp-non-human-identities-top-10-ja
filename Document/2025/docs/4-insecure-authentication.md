@@ -21,7 +21,7 @@
 
 
 ## 防御方法
-- *最新の認証標準を採用する:** 安全な認証には OAuth 2.1 と OIDC を使用し、暗黙的フローや PKCE を使用しない認可コードフローなどの非推奨のフローを避けます。
+- **最新の認証標準を採用する:** 安全な認証には OAuth 2.1 と OIDC を使用し、暗黙的フローや PKCE を使用しない認可コードフローなどの非推奨のフローを避けます。
 - **クレデンシャルレス方式を活用する:** 静的クレデンシャルを、インスタンスプロファイルまたは OIDC フェデレーションを介した一時的なスコープ付きトークンに置き換えます。
 - **OAuth 実装を標準化する:** OAuth 標準から逸脱するカスタムプラクティスを避け、セキュリティギャップを最小限に抑えます。
 - **定期的なセキュリティ監査を実施する:** 認証方式を定期的に見直し、非推奨な構成や安全でない構成を特定して排除します。
@@ -38,10 +38,10 @@
 - [Google Account Help: Sign in Using App Passwords](https://support.google.com/accounts/answer/185833?hl=en)
 
 ## データポイント
-- CSA NHI Report - 22% answers put deprecated access methods as one of the top 3 most concerning NHI threats. (8/10)
-- Recent Breach - [MSFT SAS Token Breach](https://www.wiz.io/blog/38-terabytes-of-private-data-accidentally-exposed-by-microsoft-ai-researchers)
-- Recent Breach - [Uber Breach](https://www.upguard.com/blog/what-caused-the-uber-data-breach)
-- Recent Breach - [CircleCI Breach](https://circleci.com/blog/jan-4-2023-incident-report/)
-- Recent Breach - [Cloudflare Breach](https://medium.com/@ronilichtman/how-cloudflare-got-hoktad-part-one-d5bb75dac3f0)
-- Recent Breach - [Snowflake Breach](https://medium.com/@ronilichtman/snowstorm-surrounding-the-recent-snowflake-hack-ab7e51e0c5be)
-- Recent Breach - [.env file Breach](https://medium.com/@ronilichtman/large-scale-extortion-via-secrets-in-env-files-why-secret-vaults-just-arent-enough-9b4c568724ca)
+- CSA NHI Report - 22% の回答者が非推奨のアクセス方式を最も懸念される NHI 脅威のトップ 3 の一つに挙げています。 (8/10)
+- 最近の侵害 - [MSFT SAS トークンの侵害](https://www.wiz.io/blog/38-terabytes-of-private-data-accidentally-exposed-by-microsoft-ai-researchers)
+- 最近の侵害 - [Uber の侵害](https://www.upguard.com/blog/what-caused-the-uber-data-breach)
+- 最近の侵害 - [CircleCI の侵害](https://circleci.com/blog/jan-4-2023-incident-report/)
+- 最近の侵害 - [Cloudflare の侵害](https://medium.com/@ronilichtman/how-cloudflare-got-hoktad-part-one-d5bb75dac3f0)
+- 最近の侵害 - [Snowflake の侵害](https://medium.com/@ronilichtman/snowstorm-surrounding-the-recent-snowflake-hack-ab7e51e0c5be)
+- 最近の侵害 - [.env file の侵害](https://medium.com/@ronilichtman/large-scale-extortion-via-secrets-in-env-files-why-secret-vaults-just-arent-enough-9b4c568724ca)
