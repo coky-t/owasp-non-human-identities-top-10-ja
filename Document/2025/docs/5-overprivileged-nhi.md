@@ -8,14 +8,14 @@
 
 ## 説明
 
-Non-human identities (NHIs)—such as service accounts, API tokens, and workload identities—are designed for programmatic access to cloud resources and services. They enable applications, services, and automated processes to function securely without human intervention. However, during application development and maintenance, developers or administrators may inadvertently assign NHIs excessive privileges beyond their functional requirements, unnecessarily expanding the potential blast radius in case of a compromise.
-When an over-privileged NHI is compromised—whether through vulnerabilities in the application, malware, or other security breaches—attackers can exploit the excessive permissions to:
+サービスアカウント、API トークン、ワークロードアイデンティティなどの非人間アイデンティティ (NHI) はクラウドリソースとサービスへのプログラムによるアクセスのために設計されています。これらによりアプリケーション、サービス、自動化されたプロセスが人間の介入なしに安全に機能できます。しかし、アプリケーション開発や保守の際に、開発者や管理者が誤って NHI に機能要件を超える過剰な権限を割り当て、侵害が発生した場合の潜在的な影響範囲を不必要に広げてしまう可能性があります。
+過剰特権の NHI が、アプリケーションの脆弱性、マルウェア、その他のセキュリティ侵害によって侵害された場合、攻撃者は過剰な権限を悪用して以下を行うことができます。
 
-* **Access Sensitive Data:** Unauthorized access to confidential files, databases, or user information.
-* **Escalate Privileges:** Gain higher levels of access within the system, potentially reaching administrative or root levels.
-* **Move Laterally Within the Network:** Access other systems or services within the organization's network that the NHI can reach.
-* **Install Malicious Software:** Deploy malware, ransomware, or other malicious tools to further compromise the system.
-* **Entire cloud account takeover:** Leak of identities related to cloud root account or administrator, could leak to full control and to account takeover.
+* **機密データにアクセスする:** 機密ファイル、データベース、ユーザー情報へ不正アクセスします。
+* **権限を昇格する:** システム内でより高いレベルのアクセス権を取得し、管理者レベルまたはルートレベルに達する可能性があります。
+* **ネットワーク内でラテラルムーブする:** NHI が到達できる組織のネットワーク内で他のシステムやサービスにアクセスします。
+* **悪意のあるソフトウェアをインストールする:** マルウェア、ランサムウェア、その他の悪意のあるツールをデプロイして、システムをさらに侵害します。
+* **クラウドアカウント全体を乗っ取る:** クラウドルートアカウントまたは管理者に関連するアイデンティティが漏洩すると、完全な制御やアカウントの乗っ取りにつながる可能性があります。
 
 ## 攻撃シナリオの例
 
