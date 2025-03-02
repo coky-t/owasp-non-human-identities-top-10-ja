@@ -19,11 +19,11 @@
 
 ## 攻撃シナリオの例
 
-* **Overprivileged Web Server User:** A web server runs under a local user account on a Linux machine that also has access to other applications, system files, or sensitive data directories. If the web server has a vulnerability that allows remote code execution, an attacker could exploit this to gain control over the web server process. With the excessive permissions of the user account, the attacker could access or modify other applications, steal sensitive data, or make unauthorized system changes.
-* **Overprivileged VM:** A Jenkins EC2 instance is mistakenly assigned the AWS AdministratorAccess managed policy, even though it only requires permissions for EKS and ECS. Exploiting a vulnerability on the instance, an attacker gains initial access, leverages the excessive privileges to navigate the cloud environment, and exfiltrates sensitive data from S3 buckets.
-* **Overprivileged OAuth Application:** A developer installs the OAuth application that they are developing on a production Azure account and provides it with the AppRoleAssignment.ReadWriteAll privilege despite the App only requiring read access to a specific directory in Azure Blob Storage. This significantly increases the impact of the damage that a malicious entity can inflict if it gets a hold of that application.
-* **Database Service Account with Excessive Permissions:** A managed database service operates with a service account that has administrative privileges on the account. If an attacker manages to get access to the database, they could use the service account's high-level permissions to access and perform actions on the entire cloud account.
-* **Unrestricted Application User with Broad Network Access:** A database application operates with a service account that has administrative privileges on the server. If an attacker exploits a vulnerability in the database software, they could use the service account's high-level permissions to execute arbitrary commands, install malware, or create new user accounts, leading to full system compromise.
+* **過剰な権限を持つウェブサーバーユーザー:** ウェブサーバーは、他のアプリケーション、システムファイル、機密データディレクトリにもアクセスできる Linux マシン上のローカルユーザーアカウントで実行します。ウェブサーバーにリモートコード実行を許可する脆弱性がある場合、攻撃者はこれを悪用してウェブサーバープロセスを制御できます。ユーザーアカウントの過剰な権限により、攻撃者は他のアプリケーションにアクセスや変更したり、機密データを盗んだり、不正なシステム変更を行う可能性があります。
+* **過剰な権限を持つ VM:** Jenkins EC2 インスタンスは EKS と ECS の権限のみが必要であるにもかかわらず、誤って AWS AdministratorAccess 管理ポリシーが割り当てられています。インスタンスの脆弱性を悪用して、攻撃者は初期アクセスを獲得し、過剰な権限を活用してクラウド環境をナビゲートし、S3 バケットから機密データを盗み出します。
+* **過剰な権限を持つ OAuth アプリケーション:** 開発者は開発中の OAuth アプリケーションを本番 Azure アカウントにインストールします。そのアプリは Azure Blob Storage 内の特定のディレクトリへの読み取りアクセスのみを必要としているにもかかわらず、AppRoleAssignment.ReadWriteAll 権限を付与します。これにより悪意のあるエンティティがそのアプリケーションを入手した場合に与えることができる損害の影響が大幅に増加します。
+* **過剰な権限を持つデータベースサービスアカウント:** 管理されたデータベースサービスは、アカウントの管理者権限を持つサービスアカウントで動作します。攻撃者がデータベースへのアクセスに成功した場合、サービスアカウントの高レベルの権限を使用して、クラウドアカウント全体にアクセスし、アクションを実行できます。
+* **広範なネットワークアクセスを持つ制限のないアプリケーションユーザー:** データベースアプリケーションはサーバー上で管理者権限を持つサービスアカウントで動作します。攻撃者がデータベースソフトウェアの脆弱性を悪用すると、サービスアカウントの高レベルの権限を使用して任意のコマンドを実行したり、マルウェアをインストールしたり、新しいユーザーアカウントを作成し、システム全体の侵害につながる可能性があります。
 
 
 ## 防御方法
