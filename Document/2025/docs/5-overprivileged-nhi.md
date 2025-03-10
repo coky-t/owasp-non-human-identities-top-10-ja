@@ -43,14 +43,14 @@
 
 ## データポイント
 * [Datadog State of the Cloud 2024](https://www.datadoghq.com/state-of-cloud-security/)
-    * 17.6% have excessive data access, such as listing and accessing data from all S3 buckets in the account
-    * 10% of clusters have a dangerous node role that has full administrator access, allows for privilege escalation, has overly permissive data access (e.g., all S3 buckets), or allows for lateral movement across all workloads in the account
-    * Over one in three Google Cloud VMs (33%) have sensitive permissions to a project
+    * 17.6% は、アカウント内のすべての S3 バケットからデータを一覧表示してアクセスするなど、過剰なデータアクセスを持っています。
+    * 10% のクラスタには、完全な管理者アクセスを持ったり、権限昇格を許可したり、過度に寛容なデータアクセス (すべての S3 バケットなど) を持ったり、アカウント内のすべてのワークロード間でのラテラルムーブメントを許可する危険なノードロールがあります。
+    * 3 分の 1 以上の Google Cloud VM (33%) にはプロジェクトに対する機密性の高いパーミッションがあります。
 * [CSA NHI Report](https://cloudsecurityalliance.org/artifacts/state-of-non-human-identity-security-survey-report) 
-    * 33% answers put over-privileged accounts as one of the top 3 most concerning NHI threats (3/10)
-    * 37% of times over-privileged identities were the cause for NHI-related security incidents (2/10)
-    * 22% of organizations need managing permissions as the most important capability of an NHI tool (5/16)
-    * 26% of organizations believe that over 50% of their service accounts are over-privileged
+    * 33% の回答者が過剰な権限を持つアカウントを最も懸念される NHI 脅威のトップ 3 の一つに挙げています。 (3/10)
+    * 37% の場合に過剰な権限を持つアイデンティティを NHI 関連のセキュリティインシデントの原因に挙げています。 (2/10)
+    * 22% の組織が NHI ツールの最も重要な機能としてパーミッションの管理を必要としています。 (5/16)
+    * 26% の組織がサービスアカウントの 50% 以上が過剰な権限を持っていると考えています。
 * [Orca Security State of the Cloud Security report 2022](https://orca.security/wp-content/uploads/2022/09/2022-State-of-Public-Cloud-Security-Report.pdf)
-    * 44% of environments have at least one privileged identity access management (IAM) role.
-    * 23% have at least one EC2 Instance with Administrator IAM role.
+    * 44% の環境には少なくとも一つの特権アイデンティティアクセス管理 (IAM) ロールがあります。
+    * 23% には管理者 IAM ロールを持つ EC2 インスタンスが少なくとも一つあります。
