@@ -28,10 +28,10 @@
 
 ## 防御方法
 
-* **Enforce the principle of least privilege:** Assign each identity only the permissions essential for its specific tasks, avoiding any form of administrative privileges unless absolutely necessary.
-* **Regularly audit and review permissions:** Continuously assess the permissions granted to identities to ensure they are strictly necessary. Audit privileged identities to detect and address potential misuse or overprovisioning.
-* **Establish preventive guardrails:** Implement deny policies at the organizational level to prohibit excessively permissive configurations and enforce strict access controls.
-* **Leverage Just-in-Time (JIT) access:** Utilize tools that enable temporary, on-demand elevation of privileges, allowing for high-level access only when required and within a defined time frame.
+* **最小権限の原則を適用する:** 各アイデンティティには特定のタスクに必要なパーミッションのみを割り当て、絶対に必要な場合を除き、いかなる形式の管理者権限も避けます。
+* **パーミッションを定期的に監査およびレビューする:** アイデンティティに付与されたパーミッションが厳密に必要であることを確認するために、それらを継続的に評価します。特権アイデンティティを監査し、潜在的な誤用や過剰プロビジョニングを検出して対処します。
+* **予防的なガードレールを確立する:** 組織レベルで拒否ポリシーを実装し、過度に寛容な構成を禁止し、厳格なアクセス制御を実施します。
+* **Just-in-Time (JIT) アクセスを活用する:** 一時的でオンデマンドの権限昇格を可能にするツールを活用して、必要な場合にのみ定義された時間枠内で高レベルのアクセスを許可します。
 
 ## 参考情報
 * .env File Breach (August 2024) - [link1](https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/), [link2](https://medium.com/@ronilichtman/large-scale-extortion-via-secrets-in-env-files-why-secret-vaults-just-arent-enough-9b4c568724ca)
