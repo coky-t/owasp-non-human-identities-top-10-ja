@@ -1,9 +1,9 @@
 # NHI6:2025 安全でないクラウドデプロイメントの設定 (Insecure Cloud Deployment Configurations)
 
-| Threat Agents & Attack Vectors                    | Security Weakness                                                                                          | Impact                                         |
-|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| Exploitability: **Average**            | Prevalence: **Common**<br>Detectability: **Easy**                       | Technical: **Severe**<br>Business: **Specific**     |
-| Generally, discovering misconfigured pipelines is difficult because they are set up within the organization's confines. However, once a threat actor gains simple read access, they can relatively easily reconnoiter the environment and discover vulnerable configurations. | Risks in managing CI/CD pipelines have gained awareness, and as a result, many CI/CD providers support OIDC-based access and push their users to use it. However, many organizations still need to catch up and use hard-coded credentials or insecure OIDC-based authentication. <br> The CI/CD misconfigurations happen on the organizations' “home turf” and thus are easy to search for. Furthermore, current known misconfigurations are well documented. | Successfully compromising a CI/CD misconfiguration could lead to supply chain attacks or rogue access to environments, as most pipelines are granted high-privilege access.
+| 脅威エージェントと攻撃ベクトル | セキュリティ上の弱点                     | 影響度                                             |
+|--------------------------------|------------------------------------------|----------------------------------------------------|
+| 悪用可能性: **普通**           | 蔓延度: **普通**<br>検出可能性: **容易** | 技術的影響: **重大**<br>ビジネスへの影響: **限定** |
+| 一般的に、誤って設定されたパイプラインは組織の範囲内でセットアップされているため、発見するのは困難です。しかし、脅威アクターがシンプルな読み取りアクセスを獲得すると、比較的簡単に環境を偵察し、脆弱な設定を発見できます。 | CI/CD パイプラインの管理におけるリスクが認識されるようになり、その結果、多くの CI/CD プロバイダが OIDC ベースのアクセスをサポートし、ユーザーにそれを使用するよう促しています。しかし、多くの組織は依然としてキャッチアップする必要があり、ハードコードされたクレデンシャルや安全でない OIDC ベースの認証を使用しています。 <br> CI/CD の設定ミスは組織の「本拠地」で発生するため、簡単に検索できます。さらに、現在知られている設定ミスは詳細に文書化されています。 | CI/CD の設定ミスの侵害に成功すると、ほとんどのパイプラインには高い権限のアクセスが付与されているため、サプライチェーン攻撃や環境への不正アクセスにつながる可能性があります。 |
 
 ## 説明
 
