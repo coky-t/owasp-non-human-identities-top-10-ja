@@ -7,13 +7,13 @@
 
 ## 説明
 
-Continuous Integration and Continuous Deployment (CI/CD) applications enable developers to automate the process of building, testing, and deploying code to production environments. These integrations often require the CI/CD pipelines to authenticate with cloud services, which is typically achieved using either dedicated service accounts with static credentials or OpenID Connect (OIDC) for federated identity management.
+継続的インテグレーションと継続的デプロイメント (CI/CD) アプリケーションにより、開発者はコードのビルド、テスト、本番環境へのデプロイのプロセスを自動化できます。これらの統合は、多くの場合、CI/CD パイプラインがクラウドサービスで認証する必要があり、一般的に静的クレデンシャルを持つ専用のサービスアカウントか、統合アイデンティティ管理のための OpenID Connect (OIDC) のいずれかを使用して実現します。
 
-Using dedicated service accounts with static credentials in CI/CD pipelines is considered insecure. Static credentials can be inadvertently exposed through code repositories, logs, or configuration files. If compromised, these credentials can provide attackers with persistent and potentially privileged access to production environments, bypassing multi-factor authentication (MFA) and other security measures.
+CI/CD パイプラインで静的クレデンシャルを持つ専用サービスアカウントを使用することは、安全でないと考えられています。静的クレデンシャルは、コードリポジトリ、ログ、設定ファイルを通して意図せず公開される可能性があります。漏洩した場合、これらのクレデンシャルは、多要素認証 (MFA) やその他のセキュリティ対策をバイパスして、本番環境への永続的かつ潜在的に特権的なアクセスを攻撃者に提供する可能性があります。
 
-OIDC offers a more secure alternative by allowing CI/CD pipelines to obtain short-lived, dynamically generated tokens for authentication. However, misconfigurations in OIDC setups can introduce vulnerabilities. If the identity tokens are not properly validated or there are no strict conditions on token claims—such as the `sub` (subject) claim—unauthorized users might exploit these weaknesses to gain access to cloud resources.
+OIDC は CI/CD パイプラインが認証用に有効期間が短く、動的に生成されるトークンを取得できるようにすることで、より安全な代替手段を提供します。しかし、OIDC セットアップの設定ミスによって脆弱性をもたらす可能性があります。アイデンティティトークンが適切に検証されていない場合や、トークンクレーム (`sub` (subject) クレームなど) に厳密な条件がない場合、権限のないユーザーがこれらの脆弱性を悪用してクラウドリソースにアクセスするかもしれません。
 
-Proper configuration and management of CI/CD integrations are crucial to maintain the security of the production environment. This includes enforcing the principle of least privilege, implementing robust credential management practices, and ensuring that OIDC tokens are properly validated and restricted to authorized entities.
+CI/CD 統合の適切な設定と管理は本番環境のセキュリティを維持するために不可欠です。これには、最小権限の原則を適用すること、堅牢なクレデンシャル管理プラクティスを実施すること、および OIDC トークンが適切に検証され、認可されたエンティティに制限されることを確保することを含みます。
 
 
 ## 攻撃シナリオの例
