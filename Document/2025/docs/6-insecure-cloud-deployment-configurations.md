@@ -18,9 +18,9 @@ CI/CD 統合の適切な設定と管理は本番環境のセキュリティを�
 
 ## 攻撃シナリオの例
 
-* **AWS IAM Roles with Misconfigured OIDC Trust Relationships**: AWS roles that allow OIDC access through `AssumeRoleWithWebIdentity` can be misconfigured if they trust public OIDC providers like GitHub or GitLab without properly restricting the `sub` claim. Without this restriction, any user on these platforms could potentially assume the role, leading to unauthorized access to AWS resources.
+* **OIDC Trust Relationships の設定が不適切な AWS IAM ロール**: `AssumeRoleWithWebIdentity` を介して OIDC アクセスを許可する AWS ロールは、`sub` クレームを適切に制限せずに GibHub や GitLab などのパブリック OIDC プロバイダを信頼すると、設定が不適切になる可能性があります。この制限がないと、これらのプラットフォーム上のすべてのユーザーがロールを引き継ぐ可能性があり、AWS リソースへの不正アクセスにつながります。
 
-* **Hard-Coded Azure Service Principal Credentials**: An Azure Service Principal intended for use within a GitHub Action might have its credentials hard-coded into the pipeline's configuration files. If these files are stored in a publicly accessible repository or are otherwise exposed, attackers can obtain the credentials and authenticate as the service principal, gaining access to Azure resources with the associated permissions.
+* **ハードコードされている Azure サービスプリンシパルのクレデンシャル**: GitHub Action 内で使用することを意図した Azure サービスプリンシパルは、そのクレデンシャルがパイプラインの設定ファイルにハードコードされているかもしれません。これらのファイルがパブリックアクセス可能なリポジトリに保存されていたり、その他の方法で公開されている場合、攻撃者はそのクレデンシャルを入手してサービスプリンシパルとして認証し、関連するパーミッションで Azure リソースにアクセスできます。
 
 ## 防御方法
 * **Use OIDC for Secure Authentication**
