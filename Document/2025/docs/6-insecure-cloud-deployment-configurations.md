@@ -11,7 +11,7 @@
 
 CI/CD パイプラインで静的クレデンシャルを持つ専用サービスアカウントを使用することは、安全でないと考えられています。静的クレデンシャルは、コードリポジトリ、ログ、設定ファイルを通して意図せず公開される可能性があります。漏洩した場合、これらのクレデンシャルは、多要素認証 (MFA) やその他のセキュリティ対策をバイパスして、本番環境への永続的かつ潜在的に特権的なアクセスを攻撃者に提供する可能性があります。
 
-OIDC は CI/CD パイプラインが認証用に有効期間が短く、動的に生成されるトークンを取得できるようにすることで、より安全な代替手段を提供します。しかし、OIDC セットアップの設定ミスによって脆弱性をもたらす可能性があります。アイデンティティトークンが適切に検証されていない場合や、トークンクレーム (`sub` (subject) クレームなど) に厳密な条件がない場合、権限のないユーザーがこれらの脆弱性を悪用してクラウドリソースにアクセスするかもしれません。
+OIDC は CI/CD パイプラインが認証用に有効期間が短く動的に生成されるトークンを取得できるようにすることで、より安全な代替手段を提供します。しかし、OIDC セットアップの設定ミスによって脆弱性をもたらす可能性があります。アイデンティティトークンが適切に検証されていない場合や、トークンクレーム (`sub` (subject) クレームなど) に厳密な条件がない場合、権限のないユーザーがこれらの脆弱性を悪用してクラウドリソースにアクセスするかもしれません。
 
 CI/CD 統合の適切な設定と管理は本番環境のセキュリティを維持するために不可欠です。これには、最小権限の原則を適用すること、堅牢なクレデンシャル管理プラクティスを実施すること、および OIDC トークンが適切に検証され、認可されたエンティティに制限されることを確保することを含みます。
 
@@ -23,15 +23,15 @@ CI/CD 統合の適切な設定と管理は本番環境のセキュリティを�
 * **ハードコードされている Azure サービスプリンシパルのクレデンシャル**: GitHub Action 内で使用することを意図した Azure サービスプリンシパルは、そのクレデンシャルがパイプラインの設定ファイルにハードコードされているかもしれません。これらのファイルがパブリックアクセス可能なリポジトリに保存されていたり、その他の方法で公開されている場合、攻撃者はそのクレデンシャルを入手してサービスプリンシパルとして認証し、関連するパーミッションで Azure リソースにアクセスできます。
 
 ## 防御方法
-* **Use OIDC for Secure Authentication**
-  - Replace static credentials with short-lived, dynamically generated tokens using OIDC.
-  - Validate tokens strictly, including issuer, audience, and claims.
-* **Enforce Least Privilege**
-  - Limit CI/CD pipeline permissions to only what is necessary.
-  - Restrict trust relationships in IAM roles and OIDC configurations.
-* **Avoid Hard-Coded Credentials**
-  - Store secrets securely with tools like AWS Secrets Manager, Azure Key Vault, or HashiCorp Vault.
-  - Regularly scan repositories and configurations for exposed credentials.
+* **安全な認証には OIDC を使用する**
+  - OIDC を使用して、静的クレデンシャルを有効期間が短く動的に生成されるトークンに置き換えます。
+  - 発行者、利用者、クレームなど、トークンを厳密に検証します。
+* **最小権限を適用する**
+  - CI/CD パイプラインのパーミッションを必要なものだけに制限します。
+  - IAM ロールと OIDC 設定における信頼関係を制限します。
+* **ハードコードされたクレデンシャルを避ける**
+  - AWS Secrets Manager, Azure Key Vault, HashiCorp Vault などのツールで、シークレットを安全に保存します。
+  - リポジトリと設定を定期的にスキャンして、公開されたクレデンシャルを探します。
 
 ## 参考情報
 
