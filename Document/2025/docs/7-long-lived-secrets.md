@@ -8,7 +8,7 @@
 
 ## 説明
 
-Long-lived Secrets refers to the use of sensitive NHIs such as API keys, tokens, encryption keys, and certificates with expiration dates that are too far in the future or that don’t expire at all. Developers frequently use these secrets to enable applications to authenticate and interact with various services and resources within an organization. Oftentimes, these secrets can be breached or leak (see [Secret Leakage](https://owasp.org/www-project-non-human-identities-top-10/2025/2-secret-leakage/)). If a breached secret is long-lived, it provides attackers with access to sensitive services without any time constraints.
+長期間有効なシークレットとは、API キー、トークン、暗号鍵、証明書などの機密性の高い NHI のうち、有効期限が長すぎるものか、有効期限がまったくないものの使用を指します。開発者は、アプリケーションが組織内のさまざまなサービスやリソースを認証および操作できるようにするために、これらのシークレットを頻繁に使用します。多くの場合、これらのシークレットが侵害されたり漏洩する可能性があります ([シークレットの漏洩](2-secret-leakage.md) を参照)。侵害されたシークレットが長期間有効であると、攻撃者は時間的な制約なしに機密性の高いサービスにアクセスできます。
 
 ## 攻撃シナリオの例
 
