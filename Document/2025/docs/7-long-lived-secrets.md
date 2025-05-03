@@ -34,12 +34,12 @@
 
 ## データポイント
 * [Datadog State of the Cloud 2024](https://www.datadoghq.com/state-of-cloud-security/)
-    * 46% of AWS orgs users use long-lived console credentials
-    * 60% of keys across cloud providers have age > 1 year
+    * 46% の AWS 組織ユーザーが長期間有効なコンソールクレデンシャルを使用しています。
+    * 60% のクラウドプロバイダのキーが 1 年以上有効になっています。
 * [CSA NHI Report](hhttps://cloudsecurityalliance.org/artifacts/state-of-non-human-identity-security-survey-report) 
-    * 45% of times lack of credential rotation were the cause for NHI-related security incidents (1/10)
-    * 26% of organizations need management of secrets lifecycle as the most important capability of an NHI tool (1/16)
-    * 51% of organizations have no formal process to offboard or revoke long-lived API keys
+    * 45% の場合にクレデンシャルローテーションの欠如を NHI 関連のセキュリティインシデントの原因に挙げています。 (1/10)
+    * 26% の組織が NHI ツールの最も重要な機能としてシークレットのライフサイクル管理を必要としています。 (1/16)
+    * 51% の組織が長期間有効な API キーをオフボードまたは失効するための正式なプロセスを有していません。
 * [Orca Security State of the Cloud Security report 2022](https://orca.security/wp-content/uploads/2022/09/2022-State-of-Public-Cloud-Security-Report.pdf)
-    * 80% of organizations have KMS rotation disabled
-    * 79% of organizations have at least one access key older than 90 days
+    * 80% の組織が KMS ローテーションを無効にしています。
+    * 79% の組織が 90 日以上経過したアクセスキーを少なくとも一つ保有しています。
