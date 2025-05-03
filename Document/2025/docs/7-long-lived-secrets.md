@@ -12,8 +12,8 @@
 
 ## 攻撃シナリオの例
 
-* **Privilege Escalation via Stale Sensitive Access Token:** An attacker with low-level privileges in the corporate network identifies a year-old data dump. The dump contains a sensitive Access Token with admin privileges. The attacker leverages the sensitive Access Token to raise privileges in the network.
-* **Session Hijacking via Stolen Long-Lived Cookies:** A web session cookie is set to be long-lived. An infostealer campaign dumps cookies from one browser in the corporate network. The infostealer then sells that cookie to an attacker who leverages the session cookie to breach the corporate network.
+* **古くなった機密アクセストークンによる権限昇格:** 企業ネットワークで低レベルの権限を持つ攻撃者が一年前のデータダンプを発見します。そのダンプは管理者権限を持つ機密アクセストークンを含みます。攻撃者はこの機密アクセストークンを利用して、ネットワーク内で権限を昇格します。
+* **盗まれた長期間有効なクッキーによるセッションハイジャック:** ウェブセッションクッキーは長期間有効であるように設定されています。インフォスティーラーキャンペーンでは企業ネットワーク内の一つのブラウザからクッキーをダンプします。それからインフォスティーラーはそのクッキーを攻撃者に販売し、攻撃者はそのセッションクッキーを利用して企業ネットワークを侵害します。
 
 ## 防御方法
 
