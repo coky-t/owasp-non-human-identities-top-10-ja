@@ -17,10 +17,10 @@
 
 ## 防御方法
 
-* **Enable Automated Key Rotation:** Automating the rotation of API keys or credentials using cloud-native tools or simple scripts reduces manual effort and ensures credentials are not long-lived.
-* **Implement Short-Lived Credentials:** Many cloud platforms like AWS and Azure provide built-in mechanisms to use temporary credentials that automatically expire and refresh after performing the task they made for. 
-* **Adopt Zero Trust Principles:** Require re-authentication for NHIs accessing sensitive resources or performing high-risk actions.
-* **Enforce Principle of Least Privilege:** Grant only the minimum permissions necessary for the NHI to perform its tasks, reducing the impact of credential compromise.
+* **自動キーローテーションを有効にする:** クラウドネイティブツールやシンプルなスクリプトを使用して API キーやクレデンシャルの入れ替えを自動化することで、手作業を軽減し、クレデンシャルが長期間有効にならないようにします。
+* **短期間有効なクレデンシャルを導入する:** AWS や Azure などの多くのクラウドプラットフォームには、作成されたタスクの実行後に自動的に期限切れとなり更新される一時的なクレデンシャルを使用するためのメカニズムが組み込まれています。
+* **ゼロトラストの原則を採用する:** 機密リソースにアクセスしたり、リスクの高いアクションを実行する NHI に対して再認証を要求します。
+* **最小権限の原則を適用する:** NHI がタスクを実行するために必要な最小限のパーミッションのみを付与して、クレデンシャル侵害の影響を軽減します。
 
 ## 参考情報
 * Rabbit Inc. API Key Leak (June 2024) - [link](https://www.doppler.com/blog/updated-data-breaches-caused-by-leaks-in-2024)
