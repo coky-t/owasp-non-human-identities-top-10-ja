@@ -1,9 +1,9 @@
 # NHI8:2024 環境分離のNHI (Environment Isolation NHI)
 
-| Threat agents/Attack vectors                                                                                                                                                                     | Security Weakness                                                                                                             | Impacts                                                                                                                                                             |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Exploitability: **Average**                                                                                                                                                                        | Prevalence: **Uncommon**<br>Detectability: **Hard**                                                                        | Technical: **Moderate**<br>Business: **Specific**                                                                                                                    |
-| Successfully exploiting an unisolated NHI requires the threat agent to first gain access to the test environment. That said, test environments tend to have significantly less protections in place than production environments. | NHIs are not commonly re-used between non-prod and prod environments. Detecting unisolated NHI is difficult given the high variability of workload and environment permutations that can be using the same NHI. | The impact of isolated NHI depends on the privilege of the associated NHI. Given that the associated NHI is, by nature, in a prod environment, the impact is non-negligible.|
+| 脅威エージェントと攻撃ベクトル | セキュリティ上の弱点                     | 影響度                                             |
+|--------------------------------|------------------------------------------|----------------------------------------------------|
+| 悪用可能性: **普通**           | 蔓延度: **まれ**<br>検出可能性: **困難** | 技術的影響: **普通**<br>ビジネスへの影響: **限定** |
+| 分離されていない NHI の悪用に成功するには、脅威エージェントがまずテスト環境にアクセスする必要があります。とはいえ、テスト環境は本番環境と比べて保護が大幅に不足しがちです。 | 非本番環境と本番環境の間で NHI を再利用することはあまりありません。同じ NHI を使用する可能性のあるワークロードと環境の組み合わせは多岐にわたるため、分離されていない NHI を検出することは困難です。 | 分離された NHI の影響は、関連する NHI の権限に依存します。関連する NHI は、本来、本番環境にあるため、その影響は無視できません。 |
 
 
 ## 説明
