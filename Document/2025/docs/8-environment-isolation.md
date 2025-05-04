@@ -8,17 +8,17 @@
 
 ## 説明
 
-Environment isolation is a fundamental security practice in cloud application deployment, where separate environments are used for development, testing, staging, and production. This separation ensures that issues in one environment do not affect others, particularly the production environment where real users and sensitive data reside.
-Non-human identities (NHIs), such as service accounts, API keys, and roles, are often utilized during the deployment process and throughout an application's lifecycle. However, reusing the same NHIs across multiple environments—especially between testing and production—can introduce significant security vulnerabilities. If an NHI used in a less secure testing environment has permissions to access production resources, an attacker who compromises the testing environment could leverage this NHI to infiltrate the production environment.
-To mitigate these risks, it is critical to enforce strict isolation of NHIs based on the environments in which they operate. This involves:
+環境分離はクラウドアプリケーションのデプロイメントにおける基本的なセキュリティプラクティスであり、開発、テスト、ステージング、本番に別々の環境を使用します。この分離は、ある環境で発生した問題が他の環境、特に実際のユーザーや機密データが存在する本番環境に影響を及ぼさないことを確保します。
+サービスアカウント、API キー、ロールなどの非人間アイデンティティ (NHI) は、デプロイメントプロセス時やアプリケーションのライフサイクル全体を通じてしばしば利用されます。しかし、複数の環境、特にテスト環境と本番環境の間で同じ NHI を再使用すると、重大なセキュリティ脆弱性が生じる可能性があります。安全性の低いテスト環境で使用される NHI が本番環境のリソースにアクセスするパーミッションを持つ場合、テスト環境を侵害した攻撃者がこの NHI を活用して本番環境に侵入する可能性があります。
+これらのリスクを緩和するには、NHI が動作する環境に基づいて NHI を厳密に分離することが重要です。これには以下があります。
 
 
-* **Using Separate NHIs for Each Environment:** Assign unique NHIs to each environment to prevent cross-environment access.
-* **Applying the Principle of Least Privilege:** Limit NHIs' permissions to only what is necessary for their specific environment.
-* **Implementing Environment-Specific Access Controls:** Ensure that NHIs in non-production environments cannot access production resources.
-* **Regular Auditing and Monitoring:** Continuously monitor NHIs for any unauthorized access attempts or anomalies.
+* **環境ごとに個別の NHI を使用すること:** 環境ごとに一意の NHI を割り当て、環境をまたいだアクセスを防ぎます。
+* **最小権限の原則を適用すること:** NHI のパーミッションを特定の環境に必要なものだけに制限します。
+* **環境固有のアクセス制御を実施すること:** 非本番環境の NHI が本番環境のリソースにアクセスできないようにします。
+* **定期的に監査および監視すること:** NHI を継続的に監視して、不正アクセスの試みや異常がないか確認します。
 
-By isolating environments and the NHIs associated with them, organizations can significantly reduce the attack surface and prevent potential breaches from propagating across environments.
+環境とそれに関連する NHI を分離することで、組織は攻撃対象領域を大幅に削減し、潜在的な侵害が環境全体に伝播することを防止できます。
 
 ## 攻撃シナリオの例
 
