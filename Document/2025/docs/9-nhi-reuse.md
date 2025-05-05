@@ -1,9 +1,9 @@
 # NHI9:2025 NHI の再使用 (NHI Reuse)
 
-| Threat agents/Attack vectors | Security Weakness                                                                                                                                                                                                                                                                                                                | Impacts                                       |
-|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| Exploitability: **Hard**    | Prevalence: **Widespread**<br>Detectability: **Hard**                                                                                                                                                                                                                                                                           | Technical: **Low**<br>Business: **Specific** |
-| Successfully exploiting a Re-used NHI requires the threat agent to first gain access to the environment. Therefore, NHI Reuse is dependent on a separate initial access vector. | NHIs are very commonly reused because tailor fitting NHI for each workload is difficult. Common cases include the use of a single AWS IAM Role for multiple workloads or the use of a single API key for multiple workloads. Detecting NHI reuse is difficult given the high variability of workloads that can be using the NHI. | NHI Reuse impact depends on the privilege of the associated NHI. If least-privilege is adopted, this impact is Low. |
+| 脅威エージェントと攻撃ベクトル | セキュリティ上の弱点                     | 影響度                                             |
+|--------------------------------|------------------------------------------|----------------------------------------------------|
+| 悪用可能性: **困難**           | 蔓延度: **広範**<br>検出可能性: **困難** | 技術的影響: **低い**<br>ビジネスへの影響: **限定** |
+| 再使用された NHI の悪用に成功するには、脅威エージェントがまず環境にアクセスする必要があります。したがって、NHI の再使用は別の初期アクセスベクトルに依存します。 | ワークロードごとに NHI を合わせることは困難であるため、NHI は非常によく再使用されます。よくあるケースとしては、複数のワークロードに単一の AWS IAM ロールを使用したり、複数のワークロードに単一の API キーを使用するものがあります。NHI を使用するワークロードは多岐にわたるため、NHI の再使用を検出するには困難です。 | NHI の再使用の影響は、関連する NHI の権限に依存します。最小権限が採用される場合、この影響は低くなります。 |
 
 ## 説明
 
