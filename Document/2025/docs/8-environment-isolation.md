@@ -37,4 +37,4 @@
 * [AWS Recommendations on Workload Isolation](https://aws.amazon.com/solutions/guidance/workload-isolation-on-aws/)
 
 ## データポイント
-* **CSA NHI Report** - 32% of times configuration error was the cause for NHI-related security incidents. (4/10)
+* **CSA NHI Report** - 32% の場合に設定エラーを NHI 関連のセキュリティインシデントの原因に挙げています。 (4/10)
