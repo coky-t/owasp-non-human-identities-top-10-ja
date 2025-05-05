@@ -8,7 +8,7 @@
 
 ## 説明
 
-環境分離はクラウドアプリケーションのデプロイメントにおける基本的なセキュリティプラクティスであり、開発、テスト、ステージング、本番に別々の環境を使用します。この分離は、ある環境で発生した問題が他の環境、特に実際のユーザーや機密データが存在する本番環境に影響を及ぼさないことを確保します。
+環境分離はクラウドアプリケーションのデプロイメントにおける基本的なセキュリティプラクティスであり、開発、テスト、ステージング、本番に個別の環境を使用します。この分離は、ある環境で発生した問題が他の環境、特に実際のユーザーや機密データが存在する本番環境に影響を及ぼさないことを確保します。
 サービスアカウント、API キー、ロールなどの非人間アイデンティティ (NHI) は、デプロイメントプロセス時やアプリケーションのライフサイクル全体を通じてしばしば利用されます。しかし、複数の環境、特にテスト環境と本番環境の間で同じ NHI を再使用すると、重大なセキュリティ脆弱性が生じる可能性があります。安全性の低いテスト環境で使用される NHI が本番リソースにアクセスするパーミッションを持つ場合、テスト環境を侵害した攻撃者がこの NHI を活用して本番環境に侵入する可能性があります。
 これらのリスクを緩和するには、NHI が動作する環境に基づいて NHI を厳密に分離することが重要です。これには以下があります。
 
@@ -27,10 +27,10 @@
 
 
 ## 防御方法
-* **Strict Environment Isolation for NHIs:** Assign unique NHIs to each environment (development, testing, staging, production) to ensure that access credentials or identities in one environment cannot be reused in another.
-* **Apply the Principle of Least Privilege (PoLP):** Grant NHIs only the minimal permissions required for their specific tasks within their designated environments. This minimizes the potential damage if an NHI is compromised.
-* **Enforce Environment-Specific Access Controls:** Configure access policies so that NHIs in non-production environments (e.g., testing) cannot interact with or access resources in the production environment.
-* **Segregate Infrastructure for Sensitive Resources:** Use separate resource groups, subscriptions, or accounts to isolate production from non-production environments. This ensures that even with an NHI compromise, the blast radius is limited to its environment.
+* **NHI の厳格な環境分離:** 環境 (開発、テスト、ステージング、本番) ごとに一意の NHI を割り当て、ある環境のクレデンシャルやアイデンティティを別の環境で再使用できないようにします。
+* **最小権限の原則 (PoLP) を適用する:** NHI には、指定された環境内での特定のタスクに必要な最小限のパーミッションのみを付与します。これにより NHI が侵害された場合の潜在的な損害を最小限に抑えます。
+* **環境固有のアクセス制御を実施する:** 非本番環境 (テストなど) の NHI が本番環境のリソースとやり取りやアクセスできないようにアクセスポリシーを設定します。
+* **機密リソースのためのインフラストラクチャを分離する:** 個別のリソースグループ、サブスクリプション、アカウントを使用して、本番環境と非本番環境を分離します。これにより、NHI が侵害された場合でも、影響範囲はその環境に限定されます。
 
 
 ## 参考情報
