@@ -7,11 +7,11 @@
 
 ## 説明
 
-Non-Human Identities (NHIs), such as service accounts, API keys, and machine credentials, play a critical role in enabling applications and services to authenticate and access necessary resources. However, reusing the same NHI across different applications, services, or components—even if they are deployed together—introduces significant security risks. If an NHI is compromised in one area, an attacker can exploit it to gain unauthorized access to other parts of the system that use the same credentials. 
+サービスアカウント、API キー、マシンクレデンシャルなどの非人間アイデンティティ (NHI) は、アプリケーションやサービスが必要なリソースを認証してアクセスできるようにする上で重要な役割を果たします。しかし、異なるアプリケーション、サービス、コンポーネント間で同じ NHI を再使用すると、たとえそれらが一緒にデプロイされるとしても、重大なセキュリティリスクをもたらします。ある領域で NHI が侵害されると、攻撃者はそれを悪用して、同じクレデンシャルを使用するシステムの他の部分に不正にアクセスする可能性があります。
 
-In addition to these risks, the reuse of NHIs can complicate breach mitigation actions and impact audits.   
+これらのリスクに加えて、NHI の再使用は侵害の緩和措置を複雑にし、監査に影響を及ぼす可能性があります。
 
-To minimize these risks, it's essential to assign unique NHIs to each application or service. This approach adheres to the principle of least privilege, ensuring that each NHI has only the permissions necessary for its specific function. By isolating NHIs, organizations can contain potential breaches and prevent attackers from moving laterally within the environment.
+これらのリスクを最小限に抑えるには、アプリケーションやサービスごとに固有の NHI を割り当てることが不可欠です。このアプローチは最小権限の原則を遵守し、NHI ごとに特定の機能に必要なパーミッションのみを持つように確保します。NHI を分離することで、組織は潜在的な侵害を封じ込め、攻撃者が環境内でラテラルムーブすることを防止できます。
 
 ## 攻撃シナリオの例
 
