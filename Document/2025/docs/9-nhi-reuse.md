@@ -15,9 +15,9 @@
 
 ## 攻撃シナリオの例
 
-* **Kubernetes Service Account Reuse**: In a Kubernetes cluster, multiple pods can share the same Kubernetes service account, including critical pods responsible for orchestration tasks. If one pod has a vulnerability and gets compromised, an attacker can use the shared service account to perform actions across the cluster. This could lead to unauthorized access to sensitive data, manipulation of workloads, or even full control over the cluster's resources.
-* **Shared API Keys Between Applications**: An organization uses the same API key for multiple applications to access a third-party service. If one application is compromised and the API key is exposed, the attacker can use it to access or manipulate data across all applications that use the shared key, potentially leading to a widespread breach.
-* **Reused Cloud Credentials**: Different services within an organization utilize the same cloud credentials (e.g., AWS IAM roles, Azure service principals) to interact with cloud resources. If an attacker obtains these credentials from a less secure service, they can access critical resources used by more secure services, bypassing isolation mechanisms and escalating the attack.
+* **Kubernetes サービスアカウントの再使用**: Kubernetes クラスタでは、オーケストラタスクを担う重要なポッドを含む、複数のポッドが同じ Kubernetes サービスアカウントを共有できます。一つのポッドに脆弱性があり、侵害された場合、攻撃者は共有サービスアカウントを使用してクラスタ全体でアクションを実行できます。これにより、機密データへの不正アクセス、ワークロードの操作、クラスタのリソースの完全な制御につながる可能性があります。
+* **アプリケーション間での共有される API キー**: サードパーティサービスにアクセスするために、組織は複数のアプリケーションで同じ API キーを使用しています。あるアプリケーションが侵害され、API キーが漏洩すると、攻撃者はそのキーを使用して、共有キーを使用するすべてのアプリケーションのデータにアクセスしたり操作することができ、広範な侵害につながる可能性があります。
+* **再使用されるクラウドクレデンシャル**: 組織内のさまざまなサービスが、同じクラウドクレデンシャル (AWS IAM ロール、Azure サービスプリンシパルなど) を利用して、クラウドリソースとやり取りします。攻撃者は安全性の低いサービスからこれらのクレデンシャルを入手すると、より安全性の高いサービスが使用する重要なリソースにアクセスでき、分離メカニズムをバイパスして攻撃をエスカレートできます。
 
 ## 防御方法
 
