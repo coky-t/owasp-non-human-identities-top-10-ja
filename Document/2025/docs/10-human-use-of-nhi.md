@@ -11,15 +11,15 @@
 - 必要以上に昇格した権限
  - 詳細な監査と説明責任の欠如
  - 人間と自動の区別がつかないアクティビティ
- - 攻撃者による難読化
+ - 攻撃者による隠蔽
 
 
 ## 攻撃シナリオの例
-- **Administrators Using Service Account Credentials:**  An IT administrator uses a service account's credentials to log into cloud management consoles for convenience. This service account has extensive permissions intended for automated deployment tasks. The administrator now has access beyond their role's requirements, and any actions they perform are logged under the service account, obscuring accountability.
-- **Developers Executing Commands with NHIs:** A developer manually runs scripts or commands using an NHI that has permissions to production environments. If the developer makes an error or performs unauthorized changes, it becomes difficult to trace the activity back to them, as logs attribute the actions to the NHI.
-- **Shared API Tokens Among Team Members:** A team shares an API token associated with a service account to access certain resources quickly. This token has broad access rights. If any team member's environment is compromised, the attacker can use the shared token to access sensitive systems, and it would be challenging to identify the source of the breach.
-- **Bypassing Security Controls:** An employee uses an NHI to access resources that are restricted under their user account due to policies like MFA requirements or IP address restrictions. This undermines the organization's security posture and can lead to unauthorized data access.
-- **Attackers Leveraging NHIs for Persistence:** After compromising an environment, an attacker obtains NHI credentials and uses them to maintain access. Since NHIs are not subject to regular password changes or MFA, the attacker can persist in the environment undetected for extended periods.
+- **サービスアカウントのクレデンシャルを使用する管理者:** IT 管理者は、利便性のためにサービスアカウントのクレデンシャルを使用して、クラウド管理コンソールにログインします。このサービスアカウントは自動デプロイメントタスクのための広範なパーミッションを有しています。管理者は自分の役割の要件を超えるアクセスを持つようになり、実行するすべてのアクションはサービスアカウントの元にログ記録されるため、説明責任が不明瞭になります。
+- **NHI でコマンドを実行する開発者:** 開発者は、本番環境へのパーミッションを持つ NHI を使用して、スクリプトやコマンドを手動で実行します。開発者がエラーを起こしたり、認可されていない変更を実行すると、そのアクションが NHI に関連付けられてログ記録されるため、そのアクティビティを追跡することが困難になります。
+- **チームメンバー間で共有される API トークン:** チームは、特定のリソースに素早くアクセスするために、サービスアカウントに関連付けられた API トークンを共有します。このトークンには広範なアクセス権限があります。チームメンバーの環境が侵害された場合、攻撃者は共有トークンを使用して機密システムにアクセスでき、侵害の原因を特定することが困難になります。
+- **セキュリティコントロールのバイパス:** 従業員が NHI を使用して、MFA 要件や IP アドレス制限などのポリシーによりユーザーアカウントでは制限されているリソースにアクセスします。これは組織のセキュリティ態勢を損ない、不正なデータアクセスにつながる可能性があります。
+- **永続的に NHI を活用する攻撃者:** 環境を侵害した後、攻撃者は NHI クレデンシャルを取得し、それを使用してアクセスを維持します。NHI は定期的なパスワード変更や MFA の対象ではないため、攻撃者は長期間にわたって検知されずに環境にとどまることができます。
 
 ## 防御方法
 - **Use dedicated identities:** Use dedicated human identities with appropriate roles and permissions for debugging or maintenance tasks.
