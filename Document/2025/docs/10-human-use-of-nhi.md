@@ -1,9 +1,9 @@
 # NHI10:2025 NHI の人間による使用 (Human Use of NHI)
 
-| Threat Agents & Attack Vectors                    | Security Weakness                                                                                          | Impact                                         |
-|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| Exploitability: **Hard**            | Prevalence: **Common**<br>Detectability: **Hard**                       | Technical: **Low**<br>Business: **Specific**     |
-| Successfully exploiting Human use of NHI requires the threat agent first to gain access to the environment. Therefore, Human use of NHI attacks depends on a separate initial access vector. | Developers often impersonate service accounts to debug issues.<br>Most NHI providers do not provide tooling to differentiate between workloads assuming the NHI and humans assuming the NHI.      | Human use of NHI impact depends on the privilege of the associated NHI.<br>If least-privilege is adopted, this impact is Low. 
+| 脅威エージェントと攻撃ベクトル | セキュリティ上の弱点                     | 影響度                                             |
+|--------------------------------|------------------------------------------|----------------------------------------------------|
+| 悪用可能性: **困難**           | 蔓延度: **普通**<br>検出可能性: **困難** | 技術的影響: **低い**<br>ビジネスへの影響: **限定** |
+| NHI の人間による使用を悪用することを成功するには、脅威エージェントがまず環境にアクセスする必要があります。したがって、NHI の人間による使用の攻撃は別の初期アクセスベクトルに依存します。 | 開発者は、問題をデバッグするためにサービスアカウントになりすますことがよくあります。 <br> ほとんどの NHI プロバイダは、NHI を想定したワークロードと NHI を想定した人間とを区別するためのツールを提供していません。 | NHI の人間による使用の影響は、関連する NHI の権限に依存します。 <br> 最小権限が採用されている場合、この影響は低くなります。 |
 
 ## 説明
 Non-human identities (NHIs)—such as service accounts, API tokens, and workload identities—are designed for programmatic access to cloud resources and services. They enable applications, services, and automated processes to function securely without human intervention. However, during application development and maintenance, developers or administrators may misuse these NHIs for manual tasks that should be performed using individual human identities with appropriate privileges.
