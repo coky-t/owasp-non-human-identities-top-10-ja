@@ -21,16 +21,16 @@
 
 ## 防御方法
 
-* **Assign Unique NHIs to Each Application or Service**
-   - Ensure that each logical system component is granted a unique NHI which it operates under
-   - Ensure that the ability to authenticate as the assigned NHI is limited to the associated system component
-* **Assign Unique NHIs in Each Environment**
-   - Ensure that each logical environment uses distinct NHIs when interacting with other systems or environments
-* **Enforce the Principle of Least Privilege**
-   - Ensure that NHIs are only granted the minimal level of access required for their function
-* **Audit and Review the Use of NHIs**
-   - Audit all NHIs along with their access grants and assigned system components
-   - Review, on a regular basis, that NHIs are not reused and that they continue to follow the principle of least privilege for their function
+* **アプリケーションやサービスごとに固有の NHI を割り当てる**
+   - 論理システムコンポーネントごとに、その下で動作する固有の NHI が付与されるようにします。
+   - 割り当てられた NHI として認証する能力が、関連するシステムコンポーネントに限定されているようにします。
+* **環境ごとに固有の NHI を割り当てる**
+   - 各論理環境が、他のシステムや環境とやり取りする際に、別個の NHI を使用するようにします。
+* **最小権限の原則を適用する**
+   - NHI にはその機能に必要な最小限のアクセスのみが付与されるようにします。
+* **NHI の使用を監査およびレビューする**
+   - すべての NHI とそのアクセス付与および割り当てられたシステムコンポーネントを監査します。
+   - NHI が再使用されていないこと、およびその機能に応じた最小権限の原則を継続的に遵守していることを定期的にレビューします。
 
 ## 参考情報
 
