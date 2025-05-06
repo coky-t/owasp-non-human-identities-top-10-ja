@@ -6,12 +6,12 @@
 | NHI の人間による使用を悪用することを成功するには、脅威エージェントがまず環境にアクセスする必要があります。したがって、NHI の人間による使用の攻撃は別の初期アクセスベクトルに依存します。 | 開発者は、問題をデバッグするためにサービスアカウントになりすますことがよくあります。 <br> ほとんどの NHI プロバイダは、NHI を想定したワークロードと NHI を想定した人間とを区別するためのツールを提供していません。 | NHI の人間による使用の影響は、関連する NHI の権限に依存します。 <br> 最小権限が採用されている場合、この影響は低くなります。 |
 
 ## 説明
-Non-human identities (NHIs)—such as service accounts, API tokens, and workload identities—are designed for programmatic access to cloud resources and services. They enable applications, services, and automated processes to function securely without human intervention. However, during application development and maintenance, developers or administrators may misuse these NHIs for manual tasks that should be performed using individual human identities with appropriate privileges.
-This practice introduces significant security risks: 
-- Elevated privileges beyond necessity
- - Lack of detailed auditing and accountability
- - Indistinguishable activity between humans and automation
- - Obfuscation by attackers
+サービスアカウント、API トークン、ワークロードアイデンティティなどの非人間アイデンティティ (NHI) は、クラウドリソースやサービスへのプログラムによるアクセスのために設計されています。これにより、アプリケーション、サービス、自動プロセスが、人間の介入なしに安全に機能するようになります。しかし、アプリケーションの開発や保守において、開発者や管理者がこれらの NHI を、適切な権限を持つ個々の人間のアイデンティティを使用して実行すべき手動タスクに悪用してしまう可能性があります。
+このプラクティスは重大なセキュリティリスクをもたらします。
+- 必要以上に昇格した権限
+ - 詳細な監査と説明責任の欠如
+ - 人間と自動の区別がつかないアクティビティ
+ - 攻撃者による難読化
 
 
 ## 攻撃シナリオの例
