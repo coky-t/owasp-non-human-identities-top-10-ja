@@ -44,5 +44,5 @@
 ## データポイント
 
 - **Cloud Vulnerability Database** \- Chronicle cross-customer bucket access
-- **CSA NHI Report** \- 14% of organizations need consumer identification as the most important capability of an NHI tool. (11/16)
+- **CSA NHI Report** \- 14% の組織が NHI ツールの最も重要な機能としてカスタマーの識別を必要としています。 (11/16)
 - **Recent Breach** \- .env file Breach \- [link](https://medium.com/@ronilichtman/large-scale-extortion-via-secrets-in-env-files-why-secret-vaults-just-arent-enough-9b4c568724ca)
