@@ -35,5 +35,5 @@
 
 ## データポイント
 - [Anetac Report: 75 Percent of Organizations Misuse Service Accounts, Leading to Critical Security Risks](https://cioinfluence.com/security/anetac-report-75-percent-of-organizations-misuse-service-accounts-leading-to-critical-security-risks/)
-- CSA NHI Report - 32% of organizations put service accounts as most challenging to manage. (1/16)
-- CSA NHI Report - 26% of organizations believe that over 50% of their service accounts are over-privileged
+- CSA NHI Report - 32% の組織がサービスアカウントの管理を最も困難としています。 (1/16)
+- CSA NHI Report - 26% の組織が自社のサービスアカウントの 50% 以上に過剰な権限を与えられていると考えています。
