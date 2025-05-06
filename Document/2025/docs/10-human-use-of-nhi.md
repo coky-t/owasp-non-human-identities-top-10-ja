@@ -19,13 +19,13 @@
 - **NHI でコマンドを実行する開発者:** 開発者は、本番環境へのパーミッションを持つ NHI を使用して、スクリプトやコマンドを手動で実行します。開発者がエラーを起こしたり、認可されていない変更を実行すると、そのアクションが NHI に関連付けられてログ記録されるため、そのアクティビティを追跡することが困難になります。
 - **チームメンバー間で共有される API トークン:** チームは、特定のリソースに素早くアクセスするために、サービスアカウントに関連付けられた API トークンを共有します。このトークンには広範なアクセス権限があります。チームメンバーの環境が侵害された場合、攻撃者は共有トークンを使用して機密システムにアクセスでき、侵害の原因を特定することが困難になります。
 - **セキュリティコントロールのバイパス:** 従業員が NHI を使用して、MFA 要件や IP アドレス制限などのポリシーによりユーザーアカウントでは制限されているリソースにアクセスします。これは組織のセキュリティ態勢を損ない、不正なデータアクセスにつながる可能性があります。
-- **永続的に NHI を活用する攻撃者:** 環境を侵害した後、攻撃者は NHI クレデンシャルを取得し、それを使用してアクセスを維持します。NHI は定期的なパスワード変更や MFA の対象ではないため、攻撃者は長期間にわたって検知されずに環境にとどまることができます。
+- **永続的に NHI を活用する攻撃者:** 環境を侵害した後、攻撃者は NHI クレデンシャルを取得し、それを使用してアクセスを維持します。NHI は定期的なパスワード変更や MFA の対象ではないため、攻撃者は長期間にわたって検出されずに環境にとどまることができます。
 
 ## 防御方法
-- **Use dedicated identities:** Use dedicated human identities with appropriate roles and permissions for debugging or maintenance tasks.
-- **Audit and Monitor NHI Activity:** Use tools or platforms that support auditing and tracking of NHI usage, making human use detectable and accountable.
-- **Use Context-Aware Access Controls:** Use conditional access policies that detect and block human access to NHIs based on suspicious patterns.
-- **Educate Developers and Administrators:** Provide training on the risks of using NHIs manually and provide alternative access methods to ensure secure access practices.
+- **専用のアイデンティティを使用する:** デバッグやメンテナンスタスクには、適切なロールとパーミッションを持つ専用の人間のアイデンティティを使用します。
+- **NHI アクティビティを監査および監視する:** NHI の使用の監査と追跡をサポートするツールやプラットフォームを使用し、人間による使用を検出可能にし、説明責任を果たせるようにします。
+- **コンテキストを考慮したアクセス制御を使用する:** 疑わしいパターンに基づいて NHI への人間によるアクセスを検出してブロックする条件付きアクセスポリシーを使用します。
+- **開発者と管理者を教育する:** NHI を手動で使用するリスクに関するトレーニングを提供し、安全なアクセスプラクティスを確保するために代替アクセス手法を提供します。
 
 ## 参考情報
 - [Microsoft Azure: Best Practices for Securing Service Accounts](https://docs.microsoft.com/en-us/azure/security/fundamentals/service-accounts)
