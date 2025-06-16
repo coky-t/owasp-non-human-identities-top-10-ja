@@ -2,6 +2,9 @@
 
 This is the unofficial Japanese translation of the [OWASP Non-Human Identities Top 10](https://github.com/OWASP/www-project-non-human-identities-top-10).
 
+- Document Site - <https://coky-t.gitbook.io/owasp-non-human-identities-top-10-ja>
+- Document Repository - <https://github.com/coky-t/owasp-non-human-identities-top-10-ja>
+
 ### Originator
 
 - Project Site - <https://owasp.org/www-project-non-human-identities-top-10/>
@@ -29,3 +32,6 @@ This is the unofficial Japanese translation of the [OWASP Non-Human Identities T
 ## Translator (Japanese)
 
 [Koki Takeyama](https://github.com/coky-t)
+
+- Document Site - <https://coky-t.gitbook.io/owasp-docs-ja/>
+- Document Repository - <https://github.com/coky-t/owasp-docs-ja>
