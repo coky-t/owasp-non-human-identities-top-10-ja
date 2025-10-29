@@ -36,7 +36,7 @@
 * [Datadog State of the Cloud 2024](https://www.datadoghq.com/state-of-cloud-security/)
     * 46% の AWS 組織ユーザーが長期間有効なコンソールクレデンシャルを使用しています。
     * 60% のクラウドプロバイダのキーが 1 年以上有効になっています。
-* [CSA NHI Report](hhttps://cloudsecurityalliance.org/artifacts/state-of-non-human-identity-security-survey-report) 
+* [CSA NHI Report](https://cloudsecurityalliance.org/artifacts/state-of-non-human-identity-security-survey-report) 
     * 45% の場合にクレデンシャルローテーションの欠如を NHI 関連のセキュリティインシデントの原因に挙げています。 (1/10)
     * 26% の組織が NHI ツールの最も重要な機能としてシークレットのライフサイクル管理を必要としています。 (1/16)
     * 51% の組織が長期間有効な API キーをオフボードまたは失効するための正式なプロセスを有していません。
