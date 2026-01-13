@@ -17,6 +17,8 @@
 * **コードリポジトリと IDE の統合** 開発者は GitHub や GitLab などのコードリポジトリと直接やり取りするように IDE を設定することがよくあります。このセットアップでは IDE やその拡張機能に個人アクセストークン (PAT) や SSH キーを提供して、コードの同期、コミットのプッシュ、プルリクエストの管理などの機能を有効にする必要があります。拡張機能が侵害されると、これらのクレデンシャルは開示されて、開発者のリポジトリや機密性の高い組織のコードへの不正アクセスが可能になります。
 * **クラウドリソースにアクセスする拡張機能** 仮想マシンやクラウドサービス上でのデプロイメントやテストを容易にする拡張機能にはクラウド環境へのアクセスが必要です。開発者はこれらの拡張機能に API キーやアクセストークンなどの NHI を提供して、AWS, Azure, Google Cloud Platform などのサービスとやり取りします。悪意のある拡張機能はこれらのクレデンシャルを使用して、クラウドリソースにアクセス、変更、削除し、データ侵害やサービス中断を引き起こす可能性があります。
 * **サードパーティサービスプロバイダ** 開発者は Sisense などのサードパーティサービスプロバイダを統合して BI アプリケーションを作成します。開発者はデータベースクレデンシャルなどの特権 NHI を作成して、統合プロセスの一環としてプロバイダに送信します。プロバイダが侵害されると、攻撃者は NHI を利用して開発者の環境にアクセスできます。
+* **Salesloft Drift OAuth トークンによる侵害** GTIG (Google Threat Intelligence Group) は Salesloft Drift アプリケーションに紐づけられた侵害された OAuth アクセストークンを悪用する脅威アクター (UNC6395) を観察しました。2025 年 8 月 8 日から 18 日 の間に、これらのトークンは大量の Salesforce データの抽出に使用されました。侵入後、アクターは窃取したデータから、AWS キー、Snowflake トークン、ユーザークレデンシャルなどの機密クレデンシャルを検索し、検出を妨害するためにクエリジョブを削除しました。追加調査により、侵害は Salesforce だけにとどまらないことを確認しました。他の Drift 統合 ("Drift Email" など) の OAuth トークンも侵害されていました。
+
 
 
 ## 防御方法
@@ -33,13 +35,21 @@
    - 長期間有効なシークレットを、短期間有効で一時的なクレデンシャル (AWS STS, Azure Managed Identities など) に置き換えます。
    - シークレットローテーションを自動化して、侵害されたサードパーティ統合の影響を制限します。
 
+* **統合での SaaS トークン露出を防止する**
+   - すべてのトークンをアイデンティティとして取り扱います。OAuth トークンに **最小権限スコープ** を適用し、アプリケーションごとおよび統合ごとにアクセスを制限します。
+   - **有効期間が短いトークンまたはリフレッシュ可能なトークン** を使用し、自動ローテーションを適用して脅威ベクトルへの露出を低減します。
+   - サードパーティアプリとのすべての統合を監視およびインベントリします。すべての OAuth トークンを定期的にレビューし、未使用なものや疑わしいものを失効します。
+   - 異常な OAuth トークンの使用 (予期しないエンドポイントからのアクセス、異常な API クエリなど) に対して **異常検出と動作ベースのアラート** を有効にします。
+   - 侵害の疑いがある場合に備えて **危機対応プレイブック** を実装し、接続されているすべての OAuth トークンの失効および再発行プロセスと、それらを使用するシステムのレビュープロセスを用意します。
+
 
 ## 参考情報
 * [JetBrains Security Issue Affecting GitHub Plugin](https://blog.jetbrains.com/security/2024/06/updates-for-security-issue-affecting-intellij-based-ides-2023-1-and-github-plugin/)
 * [Malicious VSCode Extensions Stealing Data](https://blog.checkpoint.com/securing-the-cloud/malicious-vscode-extensions-with-more-than-45k-downloads-steal-pii-and-enable-backdoors/)
 * [Deep Dive into VSCode Extension Vulnerabilities](https://snyk.io/blog/visual-studio-code-extension-security-vulnerabilities-deep-dive/)
 * [Making sense out of the Sisense hack](https://medium.com/@ronilichtman/making-sense-out-of-the-sisense-hack-f61a3d9b80a7)
-
+* [Salesloft Drift Integration Used To Compromise Salesforce Instances](https://unit42.paloaltonetworks.com/threat-brief-compromised-salesforce-instances/)
+* [Widespread Data Theft Targets Salesforce Instances via Salesloft Drift](https://cloud.google.com/blog/topics/threat-intelligence/data-theft-salesforce-instances-via-salesloft-drift)
 
 ## データポイント
 * [Datadog State of the Cloud 2024]((https://www.datadoghq.com/state-of-cloud-security/))
